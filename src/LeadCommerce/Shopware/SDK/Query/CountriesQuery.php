@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class CountriesQuery extends Base
 {
-
     /**
      * @return mixed
      */

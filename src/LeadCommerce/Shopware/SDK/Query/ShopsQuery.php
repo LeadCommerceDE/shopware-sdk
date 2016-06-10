@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class ShopsQuery extends Base
 {
-
     /**
      * @return mixed
      */

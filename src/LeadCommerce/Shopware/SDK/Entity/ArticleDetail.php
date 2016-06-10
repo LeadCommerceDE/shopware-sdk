@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class ArticleDetail
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class ArticleDetail extends Base
 {
@@ -140,11 +137,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $id
+     *
      * @return ArticleDetail
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -158,11 +157,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $number
+     *
      * @return ArticleDetail
      */
     public function setNumber($number)
     {
         $this->number = $number;
+
         return $this;
     }
 
@@ -176,11 +177,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $supplierNumber
+     *
      * @return ArticleDetail
      */
     public function setSupplierNumber($supplierNumber)
     {
         $this->supplierNumber = $supplierNumber;
+
         return $this;
     }
 
@@ -194,11 +197,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $additionalText
+     *
      * @return ArticleDetail
      */
     public function setAdditionalText($additionalText)
     {
         $this->additionalText = $additionalText;
+
         return $this;
     }
 
@@ -212,11 +217,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $weight
+     *
      * @return ArticleDetail
      */
     public function setWeight($weight)
     {
         $this->weight = $weight;
+
         return $this;
     }
 
@@ -230,11 +237,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $width
+     *
      * @return ArticleDetail
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
         return $this;
     }
 
@@ -248,11 +257,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $len
+     *
      * @return ArticleDetail
      */
     public function setLen($len)
     {
         $this->len = $len;
+
         return $this;
     }
 
@@ -266,11 +277,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $height
+     *
      * @return ArticleDetail
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
         return $this;
     }
 
@@ -284,11 +297,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $ean
+     *
      * @return ArticleDetail
      */
     public function setEan($ean)
     {
         $this->ean = $ean;
+
         return $this;
     }
 
@@ -302,11 +317,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $purchaseUnit
+     *
      * @return ArticleDetail
      */
     public function setPurchaseUnit($purchaseUnit)
     {
         $this->purchaseUnit = $purchaseUnit;
+
         return $this;
     }
 
@@ -320,11 +337,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $descriptionLong
+     *
      * @return ArticleDetail
      */
     public function setDescriptionLong($descriptionLong)
     {
         $this->descriptionLong = $descriptionLong;
+
         return $this;
     }
 
@@ -338,11 +357,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $referenceUnit
+     *
      * @return ArticleDetail
      */
     public function setReferenceUnit($referenceUnit)
     {
         $this->referenceUnit = $referenceUnit;
+
         return $this;
     }
 
@@ -356,11 +377,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $packUnit
+     *
      * @return ArticleDetail
      */
     public function setPackUnit($packUnit)
     {
         $this->packUnit = $packUnit;
+
         return $this;
     }
 
@@ -374,11 +397,13 @@ class ArticleDetail extends Base
 
     /**
      * @param string $shippingTime
+     *
      * @return ArticleDetail
      */
     public function setShippingTime($shippingTime)
     {
         $this->shippingTime = $shippingTime;
+
         return $this;
     }
 
@@ -392,11 +417,13 @@ class ArticleDetail extends Base
 
     /**
      * @param Price[] $prices
+     *
      * @return ArticleDetail
      */
     public function setPrices($prices)
     {
         $this->prices = $prices;
+
         return $this;
     }
 
@@ -410,11 +437,13 @@ class ArticleDetail extends Base
 
     /**
      * @param ConfiguratorOption[] $configuratorOptions
+     *
      * @return ArticleDetail
      */
     public function setConfiguratorOptions($configuratorOptions)
     {
         $this->configuratorOptions = $configuratorOptions;
+
         return $this;
     }
 
@@ -428,11 +457,13 @@ class ArticleDetail extends Base
 
     /**
      * @param ArticleAttribute $attribute
+     *
      * @return ArticleDetail
      */
     public function setAttributes($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 
@@ -446,11 +477,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $articleId
+     *
      * @return ArticleDetail
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -464,11 +497,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $unitId
+     *
      * @return ArticleDetail
      */
     public function setUnitId($unitId)
     {
         $this->unitId = $unitId;
+
         return $this;
     }
 
@@ -482,11 +517,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $kind
+     *
      * @return ArticleDetail
      */
     public function setKind($kind)
     {
         $this->kind = $kind;
+
         return $this;
     }
 
@@ -500,11 +537,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $inStock
+     *
      * @return ArticleDetail
      */
     public function setInStock($inStock)
     {
         $this->inStock = $inStock;
+
         return $this;
     }
 
@@ -518,11 +557,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $position
+     *
      * @return ArticleDetail
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -536,11 +577,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $minPurchase
+     *
      * @return ArticleDetail
      */
     public function setMinPurchase($minPurchase)
     {
         $this->minPurchase = $minPurchase;
+
         return $this;
     }
 
@@ -554,11 +597,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $purchaseSteps
+     *
      * @return ArticleDetail
      */
     public function setPurchaseSteps($purchaseSteps)
     {
         $this->purchaseSteps = $purchaseSteps;
+
         return $this;
     }
 
@@ -572,11 +617,13 @@ class ArticleDetail extends Base
 
     /**
      * @param int $maxPurchase
+     *
      * @return ArticleDetail
      */
     public function setMaxPurchase($maxPurchase)
     {
         $this->maxPurchase = $maxPurchase;
+
         return $this;
     }
 
@@ -590,16 +637,18 @@ class ArticleDetail extends Base
 
     /**
      * @param string $releaseDate
+     *
      * @return ArticleDetail
      */
     public function setReleaseDate($releaseDate)
     {
         $this->releaseDate = $releaseDate;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -607,17 +656,19 @@ class ArticleDetail extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return ArticleDetail
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isShippingFree()
     {
@@ -625,12 +676,14 @@ class ArticleDetail extends Base
     }
 
     /**
-     * @param boolean $shippingFree
+     * @param bool $shippingFree
+     *
      * @return ArticleDetail
      */
     public function setShippingFree($shippingFree)
     {
         $this->shippingFree = $shippingFree;
+
         return $this;
     }
 }

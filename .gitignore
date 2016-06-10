@@ -1,4 +1,9 @@
-/vendor/
-.idea/
-*.iml
-composer.lock
+/.idea
+/*.iml
+/nbproject
+/vendor
+/log
+/coverage
+/composer.lock
+/tests/db_config.php
+/build

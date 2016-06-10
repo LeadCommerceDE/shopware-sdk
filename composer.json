@@ -1,20 +1,28 @@
 {
-  "name": "leadcommerce/shopware-sdk",
-  "description": "A PHP SDK for the Shopware 5 REST API.",
-  "license": "Apache v2.0",
-  "authors": [
-    {
-      "name": "Alexander Mahrt",
-      "email": "amahrt@leadcommerce.de"
+    "name": "leadcommerce/shopware-sdk",
+    "description": "A PHP SDK for the Shopware 5 REST API.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Mahrt",
+            "email": "amahrt@leadcommerce.de"
+        },
+        {
+            "name": "Jochen Niebuhr",
+            "email": "jochen.niebuhr@nk360.de"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "~1.0.0",
+        "phpunit/phpunit": "~4.8.21"
+    },
+    "autoload": {
+        "psr-0": {
+            "LeadCommerce\\Shopware\\SDK\\": "src/"
+        }
     }
-  ],
-  "autoload": {
-    "psr-0": {
-      "LeadCommerce\\Shopware\\SDK\\": "src/"
-    }
-  },
-  "require": {
-    "php" : ">=5.5",
-    "guzzlehttp/guzzle": "^6.2"
-  }
 }

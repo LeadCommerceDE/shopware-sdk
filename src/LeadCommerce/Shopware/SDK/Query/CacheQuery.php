@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class CacheQuery extends Base
 {
-
     /**
      * @return mixed
      */

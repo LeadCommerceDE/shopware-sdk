@@ -2,13 +2,12 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 use LeadCommerce\Shopware\SDK\ShopwareClient;
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Base
- * @package LeadCommerce\Shopware\SDK\Query
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
@@ -31,6 +30,7 @@ abstract class Base
 
     /**
      * Base constructor.
+     *
      * @param $client
      */
     public function __construct($client)
@@ -40,25 +40,27 @@ abstract class Base
         $this->singleQueryPath = $this->singleQueryPath ? $this->singleQueryPath : $this->getQueryPath();
     }
 
-
     /**
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
+     *
      * @return array|mixed
      */
     protected function fetch($uri, $method = 'GET', $body = null, $headers = [])
     {
         $response = $this->client->request($uri, $method, $body, $headers);
+
         return $this->createEntityFromResponse($response);
     }
 
     /**
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
+     *
      * @return mixed|ResponseInterface
      */
     protected function fetchSimple($uri, $method = 'GET', $body = null, $headers = [])
@@ -69,20 +71,22 @@ abstract class Base
     /**
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
+     *
      * @return false|\stdClass
      */
     protected function fetchJson($uri, $method = 'GET', $body = null, $headers = [])
     {
         $response = $this->client->request($uri, $method, $body, $headers);
         $response = json_decode($response->getBody()->getContents());
+
         return $response ? $response : null;
     }
 
-
     /**
      * @param ResponseInterface $response
+     *
      * @return array|mixed
      */
     protected function createEntityFromResponse(ResponseInterface $response)
@@ -102,6 +106,7 @@ abstract class Base
 
     /**
      * @param $content
+     *
      * @return mixed
      */
     protected function createEntity($content)
@@ -113,18 +118,19 @@ abstract class Base
             $content = json_decode(json_encode($content), true);
             $entity->setEntityAttributes($content);
         }
+
         return $entity;
     }
 
     /**
      * @return string
      */
-    protected abstract function getClass();
+    abstract protected function getClass();
 
     /**
      * @return string
      */
-    protected abstract function getQueryPath();
+    abstract protected function getQueryPath();
 
     /**
      * @return array
@@ -136,6 +142,7 @@ abstract class Base
 
     /**
      * @param $id
+     *
      * @return array
      */
     public function findOne($id)
@@ -145,11 +152,13 @@ abstract class Base
 
     /**
      * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
+     *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     public function save(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
         $this->fetch($this->singleQueryPath, 'POST', $entity->getArrayCopy());
+
         return $entity;
     }
 }

@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class MediaQuery extends Base
 {
-
     /**
      * @return mixed
      */

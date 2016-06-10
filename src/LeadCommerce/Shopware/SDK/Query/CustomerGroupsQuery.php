@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class CustomerGroupsQuery extends Base
 {
-
     /**
      * @return mixed
      */

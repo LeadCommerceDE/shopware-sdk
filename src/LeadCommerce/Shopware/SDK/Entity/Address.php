@@ -7,80 +7,77 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Address
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Address extends Base
 {
     /**
      * @var int
      */
-    protected  $id;
+    protected $id;
     /**
      * @var string
      */
-    protected  $company;
+    protected $company;
     /**
      * @var string
      */
-    protected  $department;
+    protected $department;
     /**
      * @var string
      */
-    protected  $salutation;
+    protected $salutation;
     /**
      * @var string
      */
-    protected  $firstname;
+    protected $firstname;
     /**
      * @var string
      */
-    protected  $lastname;
+    protected $lastname;
     /**
      * @var string
      */
-    protected  $street;
+    protected $street;
     /**
      * @var string
      */
-    protected  $zipcode;
+    protected $zipcode;
     /**
      * @var string
      */
-    protected  $city;
+    protected $city;
     /**
      * @var string
      */
-    protected  $phone;
+    protected $phone;
     /**
      * @var int
      */
-    protected  $vatId;
+    protected $vatId;
     /**
      * @var string
      */
-    protected  $additionalAddressLine1;
+    protected $additionalAddressLine1;
     /**
      * @var string
      */
-    protected  $additionalAddressLine2;
+    protected $additionalAddressLine2;
     /**
      * @var int
      */
-    protected  $country;
+    protected $country;
     /**
      * @var int
      */
-    protected  $state;
+    protected $state;
     /**
      * @var array
      */
-    protected  $attribute;
+    protected $attribute;
 
     /**
      * @return int
@@ -92,11 +89,13 @@ class Address extends Base
 
     /**
      * @param int $id
+     *
      * @return Address
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -110,11 +109,13 @@ class Address extends Base
 
     /**
      * @param string $company
+     *
      * @return Address
      */
     public function setCompany($company)
     {
         $this->company = $company;
+
         return $this;
     }
 
@@ -128,11 +129,13 @@ class Address extends Base
 
     /**
      * @param string $department
+     *
      * @return Address
      */
     public function setDepartment($department)
     {
         $this->department = $department;
+
         return $this;
     }
 
@@ -146,11 +149,13 @@ class Address extends Base
 
     /**
      * @param string $salutation
+     *
      * @return Address
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $salutation;
+
         return $this;
     }
 
@@ -164,11 +169,13 @@ class Address extends Base
 
     /**
      * @param string $firstname
+     *
      * @return Address
      */
     public function setFirstname($firstname)
     {
         $this->firstname = $firstname;
+
         return $this;
     }
 
@@ -182,11 +189,13 @@ class Address extends Base
 
     /**
      * @param string $lastname
+     *
      * @return Address
      */
     public function setLastname($lastname)
     {
         $this->lastname = $lastname;
+
         return $this;
     }
 
@@ -200,11 +209,13 @@ class Address extends Base
 
     /**
      * @param string $street
+     *
      * @return Address
      */
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -218,11 +229,13 @@ class Address extends Base
 
     /**
      * @param string $zipcode
+     *
      * @return Address
      */
     public function setZipcode($zipcode)
     {
         $this->zipcode = $zipcode;
+
         return $this;
     }
 
@@ -236,11 +249,13 @@ class Address extends Base
 
     /**
      * @param string $city
+     *
      * @return Address
      */
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -254,11 +269,13 @@ class Address extends Base
 
     /**
      * @param string $phone
+     *
      * @return Address
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
 
@@ -272,11 +289,13 @@ class Address extends Base
 
     /**
      * @param int $vatId
+     *
      * @return Address
      */
     public function setVatId($vatId)
     {
         $this->vatId = $vatId;
+
         return $this;
     }
 
@@ -290,11 +309,13 @@ class Address extends Base
 
     /**
      * @param string $additionalAddressLine1
+     *
      * @return Address
      */
     public function setAdditionalAddressLine1($additionalAddressLine1)
     {
         $this->additionalAddressLine1 = $additionalAddressLine1;
+
         return $this;
     }
 
@@ -308,11 +329,13 @@ class Address extends Base
 
     /**
      * @param string $additionalAddressLine2
+     *
      * @return Address
      */
     public function setAdditionalAddressLine2($additionalAddressLine2)
     {
         $this->additionalAddressLine2 = $additionalAddressLine2;
+
         return $this;
     }
 
@@ -326,11 +349,13 @@ class Address extends Base
 
     /**
      * @param int $country
+     *
      * @return Address
      */
     public function setCountry($country)
     {
         $this->country = $country;
+
         return $this;
     }
 
@@ -344,11 +369,13 @@ class Address extends Base
 
     /**
      * @param int $state
+     *
      * @return Address
      */
     public function setState($state)
     {
         $this->state = $state;
+
         return $this;
     }
 
@@ -362,11 +389,13 @@ class Address extends Base
 
     /**
      * @param array $attribute
+     *
      * @return Address
      */
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

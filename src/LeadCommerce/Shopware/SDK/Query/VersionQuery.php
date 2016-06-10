@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class VersionQuery extends Base
 {
-
     /**
      * @return mixed
      */
@@ -13,7 +11,7 @@ class VersionQuery extends Base
     {
         return 'stdClass';
     }
-    
+
     public function getVersion()
     {
         return $this->fetchJson('/version');

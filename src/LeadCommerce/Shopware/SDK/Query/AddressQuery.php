@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class AddressQuery extends Base
 {
-
     protected $singleQueryPath = 'address';
 
     /**

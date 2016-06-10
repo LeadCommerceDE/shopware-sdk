@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class ArticleQuery extends Base
 {
-
     /**
      * @return mixed
      */

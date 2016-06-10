@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class ManufacturersQuery extends Base
 {
-
     /**
      * @return mixed
      */

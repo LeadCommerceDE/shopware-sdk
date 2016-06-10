@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class CategoriesQuery extends Base
 {
-
     /**
      * @return mixed
      */

@@ -2,16 +2,11 @@
 
 namespace LeadCommerce\Shopware\SDK\Entity;
 
-
 /**
  * Class Base
- * @package LeadCommerce\Shopware\SDK\Entity
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
- */
-/**
- * Class Base
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Base
 {
@@ -22,17 +17,21 @@ class Base
 
     /**
      * Sets the attributes of this entity.
+     *
      * @param $attributes
+     *
      * @return $this
      */
     public function setEntityAttributes($attributes)
     {
         $this->_attributes = $attributes;
+
         return $this;
     }
 
     /**
      * Gets the attributes of this entity.
+     *
      * @return array
      */
     public function getArrayCopy()
@@ -42,6 +41,7 @@ class Base
 
     /**
      * @param $name
+     *
      * @return null
      */
     public function __get($name)
@@ -49,24 +49,25 @@ class Base
         if (array_key_exists($name, $this->_attributes)) {
             $this->_attributes[$name];
         }
-
-        return null;
     }
 
     /**
      * @param $name
      * @param $value
+     *
      * @return $this
      */
     public function __set($name, $value)
     {
         $this->_attributes[$name] = $value;
+
         return $this;
     }
 
     /**
      * @param $name
      * @param $arguments
+     *
      * @return $this|mixed|null
      */
     public function __call($name, $arguments)
@@ -78,12 +79,11 @@ class Base
             if (array_key_exists($property, $this->_attributes)) {
                 return $this->_attributes[$property];
             }
-        } else if ($command == 'set') {
+        } elseif ($command == 'set') {
             $value = count($arguments) > 0 ? $arguments[0] : null;
             $this->_attributes[$property] = $value;
+
             return $this;
         }
-
-        return null;
     }
 }

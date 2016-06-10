@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class TranslationsQuery extends Base
 {
-
     /**
      * @return mixed
      */

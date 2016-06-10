@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 class VariantsQuery extends Base
 {
-
     /**
      * @return mixed
      */
