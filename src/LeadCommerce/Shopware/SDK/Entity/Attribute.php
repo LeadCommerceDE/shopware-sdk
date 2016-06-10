@@ -10,12 +10,11 @@
 
 namespace LeadCommerce\Shopware\SDK\Entity;
 
-
 /**
- * Class ArticleAttribute
+ * Class Attribute
  * @package LeadCommerce\Shopware\SDK\Entity
  */
-class ArticleAttribute extends Base
+class Attribute extends Base
 {
     /**
      * @var mixed
@@ -116,7 +115,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr1
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr1($attr1)
     {
@@ -134,7 +133,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr2
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr2($attr2)
     {
@@ -152,7 +151,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr3
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr3($attr3)
     {
@@ -170,7 +169,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr4
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr4($attr4)
     {
@@ -188,7 +187,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr5
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr5($attr5)
     {
@@ -206,7 +205,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr6
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr6($attr6)
     {
@@ -224,7 +223,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr7
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr7($attr7)
     {
@@ -242,7 +241,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr8
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr8($attr8)
     {
@@ -260,7 +259,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr9
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr9($attr9)
     {
@@ -278,7 +277,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr10
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr10($attr10)
     {
@@ -296,7 +295,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr11
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr11($attr11)
     {
@@ -314,7 +313,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr12
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr12($attr12)
     {
@@ -332,7 +331,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr13
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr13($attr13)
     {
@@ -350,7 +349,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr14
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr14($attr14)
     {
@@ -368,7 +367,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr15
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr15($attr15)
     {
@@ -386,7 +385,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr16
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr16($attr16)
     {
@@ -404,7 +403,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr17
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr17($attr17)
     {
@@ -422,7 +421,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr18
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr18($attr18)
     {
@@ -440,7 +439,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr19
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr19($attr19)
     {
@@ -458,7 +457,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr20
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setAttr20($attr20)
     {
@@ -476,7 +475,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param int $articleId
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setArticleId($articleId)
     {
@@ -494,7 +493,7 @@ class ArticleAttribute extends Base
 
     /**
      * @param int $articleDetailId
-     * @return ArticleAttribute
+     * @return Attribute
      */
     public function setArticleDetailId($articleDetailId)
     {

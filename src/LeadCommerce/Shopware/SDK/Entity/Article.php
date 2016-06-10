@@ -117,7 +117,7 @@ class Article extends Base
      */
     protected $availableTo;
     /**
-     * @var array
+     * @var Attribute
      */
     protected $attribute;
 
@@ -574,16 +574,16 @@ class Article extends Base
     /**
      * @return array
      */
-    public function getAttributeItems()
+    public function getAttributes()
     {
         return $this->attribute;
     }
 
     /**
-     * @param array $attributes
+     * @param Attribute $attributes
      * @return Article
      */
-    public function setAttributeItems($attributes)
+    public function setAttributes($attributes)
     {
         $this->attribute = $attributes;
         return $this;

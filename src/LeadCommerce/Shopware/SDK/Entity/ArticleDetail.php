@@ -82,7 +82,7 @@ class ArticleDetail extends Base
      */
     protected $configuratorOptions;
     /**
-     * @var ArticleAttribute
+     * @var Attribute
      */
     protected $attribute;
     /**
@@ -419,18 +419,18 @@ class ArticleDetail extends Base
     }
 
     /**
-     * @return ArticleAttribute
+     * @return Attribute
      */
-    public function getAttribute()
+    public function getAttributes()
     {
         return $this->attribute;
     }
 
     /**
-     * @param ArticleAttribute $attribute
+     * @param Attribute $attribute
      * @return ArticleDetail
      */
-    public function setAttribute($attribute)
+    public function setAttributes($attribute)
     {
         $this->attribute = $attribute;
         return $this;
