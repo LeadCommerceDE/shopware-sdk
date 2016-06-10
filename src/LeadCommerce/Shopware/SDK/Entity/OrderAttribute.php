@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class OrderAttribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class OrderAttribute extends Base
 {
@@ -60,11 +57,13 @@ class OrderAttribute extends Base
 
     /**
      * @param int $id
+     *
      * @return OrderAttribute
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -78,11 +77,13 @@ class OrderAttribute extends Base
 
     /**
      * @param int $orderId
+     *
      * @return OrderAttribute
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -96,11 +97,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute1
+     *
      * @return OrderAttribute
      */
     public function setAttribute1($attribute1)
     {
         $this->attribute1 = $attribute1;
+
         return $this;
     }
 
@@ -114,11 +117,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute2
+     *
      * @return OrderAttribute
      */
     public function setAttribute2($attribute2)
     {
         $this->attribute2 = $attribute2;
+
         return $this;
     }
 
@@ -132,11 +137,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute3
+     *
      * @return OrderAttribute
      */
     public function setAttribute3($attribute3)
     {
         $this->attribute3 = $attribute3;
+
         return $this;
     }
 
@@ -150,11 +157,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute4
+     *
      * @return OrderAttribute
      */
     public function setAttribute4($attribute4)
     {
         $this->attribute4 = $attribute4;
+
         return $this;
     }
 
@@ -168,11 +177,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute5
+     *
      * @return OrderAttribute
      */
     public function setAttribute5($attribute5)
     {
         $this->attribute5 = $attribute5;
+
         return $this;
     }
 
@@ -186,11 +197,13 @@ class OrderAttribute extends Base
 
     /**
      * @param string $attribute6
+     *
      * @return OrderAttribute
      */
     public function setAttribute6($attribute6)
     {
         $this->attribute6 = $attribute6;
+
         return $this;
     }
 }

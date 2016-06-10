@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class BillingAttribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class BillingAttribute extends Base
 {
@@ -60,11 +57,13 @@ class BillingAttribute extends Base
 
     /**
      * @param int $id
+     *
      * @return BillingAttribute
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -78,11 +77,13 @@ class BillingAttribute extends Base
 
     /**
      * @param int $customerBillingId
+     *
      * @return BillingAttribute
      */
     public function setCustomerBillingId($customerBillingId)
     {
         $this->customerBillingId = $customerBillingId;
+
         return $this;
     }
 
@@ -96,11 +97,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text1
+     *
      * @return BillingAttribute
      */
     public function setText1($text1)
     {
         $this->text1 = $text1;
+
         return $this;
     }
 
@@ -114,11 +117,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text2
+     *
      * @return BillingAttribute
      */
     public function setText2($text2)
     {
         $this->text2 = $text2;
+
         return $this;
     }
 
@@ -132,11 +137,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text3
+     *
      * @return BillingAttribute
      */
     public function setText3($text3)
     {
         $this->text3 = $text3;
+
         return $this;
     }
 
@@ -150,11 +157,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text4
+     *
      * @return BillingAttribute
      */
     public function setText4($text4)
     {
         $this->text4 = $text4;
+
         return $this;
     }
 
@@ -168,11 +177,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text5
+     *
      * @return BillingAttribute
      */
     public function setText5($text5)
     {
         $this->text5 = $text5;
+
         return $this;
     }
 
@@ -186,11 +197,13 @@ class BillingAttribute extends Base
 
     /**
      * @param string $text6
+     *
      * @return BillingAttribute
      */
     public function setText6($text6)
     {
         $this->text6 = $text6;
+
         return $this;
     }
 }

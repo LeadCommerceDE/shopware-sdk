@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Download
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Download extends Base
 {
@@ -48,11 +45,13 @@ class Download extends Base
 
     /**
      * @param int $id
+     *
      * @return Download
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +65,13 @@ class Download extends Base
 
     /**
      * @param int $articleId
+     *
      * @return Download
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -84,11 +85,13 @@ class Download extends Base
 
     /**
      * @param string $name
+     *
      * @return Download
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -102,11 +105,13 @@ class Download extends Base
 
     /**
      * @param string $file
+     *
      * @return Download
      */
     public function setFile($file)
     {
         $this->file = $file;
+
         return $this;
     }
 
@@ -120,11 +125,13 @@ class Download extends Base
 
     /**
      * @param int $size
+     *
      * @return Download
      */
     public function setSize($size)
     {
         $this->size = $size;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Debit
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Debit extends Base
 {
@@ -52,11 +49,13 @@ class Debit extends Base
 
     /**
      * @param int $id
+     *
      * @return Debit
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -70,11 +69,13 @@ class Debit extends Base
 
     /**
      * @param int $customerId
+     *
      * @return Debit
      */
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
         return $this;
     }
 
@@ -88,11 +89,13 @@ class Debit extends Base
 
     /**
      * @param string $account
+     *
      * @return Debit
      */
     public function setAccount($account)
     {
         $this->account = $account;
+
         return $this;
     }
 
@@ -106,11 +109,13 @@ class Debit extends Base
 
     /**
      * @param string $bankCode
+     *
      * @return Debit
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
 
@@ -124,11 +129,13 @@ class Debit extends Base
 
     /**
      * @param string $bankName
+     *
      * @return Debit
      */
     public function setBankName($bankName)
     {
         $this->bankName = $bankName;
+
         return $this;
     }
 
@@ -142,11 +149,13 @@ class Debit extends Base
 
     /**
      * @param string $accountHolder
+     *
      * @return Debit
      */
     public function setAccountHolder($accountHolder)
     {
         $this->accountHolder = $accountHolder;
+
         return $this;
     }
 }

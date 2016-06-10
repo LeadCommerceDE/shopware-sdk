@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class CustomerGroupSurcharge
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class CustomerGroupSurcharge extends Base
 {
@@ -40,11 +37,13 @@ class CustomerGroupSurcharge extends Base
 
     /**
      * @param int $id
+     *
      * @return CustomerGroupSurcharge
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -58,11 +57,13 @@ class CustomerGroupSurcharge extends Base
 
     /**
      * @param int $discount
+     *
      * @return CustomerGroupSurcharge
      */
     public function setDiscount($discount)
     {
         $this->discount = $discount;
+
         return $this;
     }
 
@@ -76,11 +77,13 @@ class CustomerGroupSurcharge extends Base
 
     /**
      * @param int $value
+     *
      * @return CustomerGroupSurcharge
      */
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 }

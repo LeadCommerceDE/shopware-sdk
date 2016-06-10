@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PropertyGroupAttribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PropertyGroupAttribute extends Base
 {
@@ -36,11 +33,13 @@ class PropertyGroupAttribute extends Base
 
     /**
      * @param int $id
+     *
      * @return PropertyGroupAttribute
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class PropertyGroupAttribute extends Base
 
     /**
      * @param int $propertyGroupId
+     *
      * @return PropertyGroupAttribute
      */
     public function setPropertyGroupId($propertyGroupId)
     {
         $this->propertyGroupId = $propertyGroupId;
+
         return $this;
     }
 }

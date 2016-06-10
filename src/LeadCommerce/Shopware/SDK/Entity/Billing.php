@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Billing
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Billing extends Base
 {
@@ -104,11 +101,13 @@ class Billing extends Base
 
     /**
      * @param int $id
+     *
      * @return Billing
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -122,11 +121,13 @@ class Billing extends Base
 
     /**
      * @param int $customerId
+     *
      * @return Billing
      */
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
         return $this;
     }
 
@@ -140,11 +141,13 @@ class Billing extends Base
 
     /**
      * @param int $countryId
+     *
      * @return Billing
      */
     public function setCountryId($countryId)
     {
         $this->countryId = $countryId;
+
         return $this;
     }
 
@@ -158,11 +161,13 @@ class Billing extends Base
 
     /**
      * @param int $stateId
+     *
      * @return Billing
      */
     public function setStateId($stateId)
     {
         $this->stateId = $stateId;
+
         return $this;
     }
 
@@ -176,11 +181,13 @@ class Billing extends Base
 
     /**
      * @param string $company
+     *
      * @return Billing
      */
     public function setCompany($company)
     {
         $this->company = $company;
+
         return $this;
     }
 
@@ -194,11 +201,13 @@ class Billing extends Base
 
     /**
      * @param string $department
+     *
      * @return Billing
      */
     public function setDepartment($department)
     {
         $this->department = $department;
+
         return $this;
     }
 
@@ -212,11 +221,13 @@ class Billing extends Base
 
     /**
      * @param string $salutation
+     *
      * @return Billing
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $salutation;
+
         return $this;
     }
 
@@ -230,11 +241,13 @@ class Billing extends Base
 
     /**
      * @param string $number
+     *
      * @return Billing
      */
     public function setNumber($number)
     {
         $this->number = $number;
+
         return $this;
     }
 
@@ -248,11 +261,13 @@ class Billing extends Base
 
     /**
      * @param string $firstName
+     *
      * @return Billing
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -266,11 +281,13 @@ class Billing extends Base
 
     /**
      * @param string $lastName
+     *
      * @return Billing
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -284,11 +301,13 @@ class Billing extends Base
 
     /**
      * @param string $street
+     *
      * @return Billing
      */
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -302,11 +321,13 @@ class Billing extends Base
 
     /**
      * @param string $streetNumber
+     *
      * @return Billing
      */
     public function setStreetNumber($streetNumber)
     {
         $this->streetNumber = $streetNumber;
+
         return $this;
     }
 
@@ -320,11 +341,13 @@ class Billing extends Base
 
     /**
      * @param string $zipCode
+     *
      * @return Billing
      */
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+
         return $this;
     }
 
@@ -338,11 +361,13 @@ class Billing extends Base
 
     /**
      * @param string $city
+     *
      * @return Billing
      */
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -356,11 +381,13 @@ class Billing extends Base
 
     /**
      * @param string $phone
+     *
      * @return Billing
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
 
@@ -374,11 +401,13 @@ class Billing extends Base
 
     /**
      * @param string $fax
+     *
      * @return Billing
      */
     public function setFax($fax)
     {
         $this->fax = $fax;
+
         return $this;
     }
 
@@ -392,11 +421,13 @@ class Billing extends Base
 
     /**
      * @param int $vatId
+     *
      * @return Billing
      */
     public function setVatId($vatId)
     {
         $this->vatId = $vatId;
+
         return $this;
     }
 
@@ -410,11 +441,13 @@ class Billing extends Base
 
     /**
      * @param string $birthday
+     *
      * @return Billing
      */
     public function setBirthday($birthday)
     {
         $this->birthday = $birthday;
+
         return $this;
     }
 
@@ -428,11 +461,13 @@ class Billing extends Base
 
     /**
      * @param BillingAttribute[] $attribute
+     *
      * @return Billing
      */
     public function setAttributes($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

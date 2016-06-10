@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class CustomerAttribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class CustomerAttribute extends Base
 {
@@ -36,11 +33,13 @@ class CustomerAttribute extends Base
 
     /**
      * @param int $id
+     *
      * @return CustomerAttribute
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class CustomerAttribute extends Base
 
     /**
      * @param int $customerId
+     *
      * @return CustomerAttribute
      */
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
         return $this;
     }
 }

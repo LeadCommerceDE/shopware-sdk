@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class ConfiguratorOption
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class ConfiguratorOption extends Base
 {
@@ -44,11 +41,13 @@ class ConfiguratorOption extends Base
 
     /**
      * @param int $id
+     *
      * @return ConfiguratorOption
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -62,11 +61,13 @@ class ConfiguratorOption extends Base
 
     /**
      * @param int $groupId
+     *
      * @return ConfiguratorOption
      */
     public function setGroupId($groupId)
     {
         $this->groupId = $groupId;
+
         return $this;
     }
 
@@ -80,11 +81,13 @@ class ConfiguratorOption extends Base
 
     /**
      * @param string $name
+     *
      * @return ConfiguratorOption
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -98,11 +101,13 @@ class ConfiguratorOption extends Base
 
     /**
      * @param int $position
+     *
      * @return ConfiguratorOption
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 }

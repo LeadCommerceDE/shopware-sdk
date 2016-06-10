@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PropertyGroupOption
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PropertyGroupOption extends Base
 {
@@ -40,11 +37,13 @@ class PropertyGroupOption extends Base
 
     /**
      * @param int $id
+     *
      * @return PropertyGroupOption
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -58,16 +57,18 @@ class PropertyGroupOption extends Base
 
     /**
      * @param string $name
+     *
      * @return PropertyGroupOption
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isFilterable()
     {
@@ -75,12 +76,14 @@ class PropertyGroupOption extends Base
     }
 
     /**
-     * @param boolean $filterable
+     * @param bool $filterable
+     *
      * @return PropertyGroupOption
      */
     public function setFilterable($filterable)
     {
         $this->filterable = $filterable;
+
         return $this;
     }
 }

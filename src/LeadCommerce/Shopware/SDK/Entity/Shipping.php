@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Shipping
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Shipping extends Base
 {
@@ -88,11 +85,13 @@ class Shipping extends Base
 
     /**
      * @param int $id
+     *
      * @return Shipping
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -106,11 +105,13 @@ class Shipping extends Base
 
     /**
      * @param int $customerId
+     *
      * @return Shipping
      */
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
         return $this;
     }
 
@@ -124,11 +125,13 @@ class Shipping extends Base
 
     /**
      * @param int $countryId
+     *
      * @return Shipping
      */
     public function setCountryId($countryId)
     {
         $this->countryId = $countryId;
+
         return $this;
     }
 
@@ -142,11 +145,13 @@ class Shipping extends Base
 
     /**
      * @param int $stateId
+     *
      * @return Shipping
      */
     public function setStateId($stateId)
     {
         $this->stateId = $stateId;
+
         return $this;
     }
 
@@ -160,11 +165,13 @@ class Shipping extends Base
 
     /**
      * @param string $company
+     *
      * @return Shipping
      */
     public function setCompany($company)
     {
         $this->company = $company;
+
         return $this;
     }
 
@@ -178,11 +185,13 @@ class Shipping extends Base
 
     /**
      * @param string $department
+     *
      * @return Shipping
      */
     public function setDepartment($department)
     {
         $this->department = $department;
+
         return $this;
     }
 
@@ -196,11 +205,13 @@ class Shipping extends Base
 
     /**
      * @param string $salutation
+     *
      * @return Shipping
      */
     public function setSalutation($salutation)
     {
         $this->salutation = $salutation;
+
         return $this;
     }
 
@@ -214,11 +225,13 @@ class Shipping extends Base
 
     /**
      * @param string $number
+     *
      * @return Shipping
      */
     public function setNumber($number)
     {
         $this->number = $number;
+
         return $this;
     }
 
@@ -232,11 +245,13 @@ class Shipping extends Base
 
     /**
      * @param string $firstName
+     *
      * @return Shipping
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -250,11 +265,13 @@ class Shipping extends Base
 
     /**
      * @param string $lastName
+     *
      * @return Shipping
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -268,11 +285,13 @@ class Shipping extends Base
 
     /**
      * @param string $street
+     *
      * @return Shipping
      */
     public function setStreet($street)
     {
         $this->street = $street;
+
         return $this;
     }
 
@@ -286,11 +305,13 @@ class Shipping extends Base
 
     /**
      * @param string $streetNumber
+     *
      * @return Shipping
      */
     public function setStreetNumber($streetNumber)
     {
         $this->streetNumber = $streetNumber;
+
         return $this;
     }
 
@@ -304,11 +325,13 @@ class Shipping extends Base
 
     /**
      * @param string $zipCode
+     *
      * @return Shipping
      */
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+
         return $this;
     }
 
@@ -322,11 +345,13 @@ class Shipping extends Base
 
     /**
      * @param string $city
+     *
      * @return Shipping
      */
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -340,11 +365,13 @@ class Shipping extends Base
 
     /**
      * @param ShippingAttribute $attribute
+     *
      * @return Shipping
      */
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

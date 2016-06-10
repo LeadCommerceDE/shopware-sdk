@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Price
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Price extends Base
 {
@@ -46,19 +43,19 @@ class Price extends Base
      */
     protected $to;
     /**
-     * @var double
+     * @var float
      */
     protected $price;
     /**
-     * @var double
+     * @var float
      */
     protected $pseudoPrice;
     /**
-     * @var double
+     * @var float
      */
     protected $basePrice;
     /**
-     * @var double
+     * @var float
      */
     protected $percent;
 
@@ -72,11 +69,13 @@ class Price extends Base
 
     /**
      * @param string $customerGroupKey
+     *
      * @return Price
      */
     public function setCustomerGroupKey($customerGroupKey)
     {
         $this->customerGroupKey = $customerGroupKey;
+
         return $this;
     }
 
@@ -90,11 +89,13 @@ class Price extends Base
 
     /**
      * @param CustomerGroup $customerGroup
+     *
      * @return Price
      */
     public function setCustomerGroup($customerGroup)
     {
         $this->customerGroup = $customerGroup;
+
         return $this;
     }
 
@@ -108,11 +109,13 @@ class Price extends Base
 
     /**
      * @param int $articleDetailsId
+     *
      * @return Price
      */
     public function setArticleDetailsId($articleDetailsId)
     {
         $this->articleDetailsId = $articleDetailsId;
+
         return $this;
     }
 
@@ -126,11 +129,13 @@ class Price extends Base
 
     /**
      * @param int $articleId
+     *
      * @return Price
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -144,11 +149,13 @@ class Price extends Base
 
     /**
      * @param int $id
+     *
      * @return Price
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -162,11 +169,13 @@ class Price extends Base
 
     /**
      * @param int $from
+     *
      * @return Price
      */
     public function setFrom($from)
     {
         $this->from = $from;
+
         return $this;
     }
 
@@ -180,11 +189,13 @@ class Price extends Base
 
     /**
      * @param string $to
+     *
      * @return Price
      */
     public function setTo($to)
     {
         $this->to = $to;
+
         return $this;
     }
 
@@ -198,11 +209,13 @@ class Price extends Base
 
     /**
      * @param float $price
+     *
      * @return Price
      */
     public function setPrice($price)
     {
         $this->price = $price;
+
         return $this;
     }
 
@@ -216,11 +229,13 @@ class Price extends Base
 
     /**
      * @param float $pseudoPrice
+     *
      * @return Price
      */
     public function setPseudoPrice($pseudoPrice)
     {
         $this->pseudoPrice = $pseudoPrice;
+
         return $this;
     }
 
@@ -234,11 +249,13 @@ class Price extends Base
 
     /**
      * @param float $basePrice
+     *
      * @return Price
      */
     public function setBasePrice($basePrice)
     {
         $this->basePrice = $basePrice;
+
         return $this;
     }
 
@@ -252,11 +269,13 @@ class Price extends Base
 
     /**
      * @param float $percent
+     *
      * @return Price
      */
     public function setPercent($percent)
     {
         $this->percent = $percent;
+
         return $this;
     }
 }

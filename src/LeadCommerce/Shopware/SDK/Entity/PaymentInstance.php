@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PaymentInstance
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PaymentInstance extends Base
 {
@@ -84,11 +81,13 @@ class PaymentInstance extends Base
 
     /**
      * @param int $id
+     *
      * @return PaymentInstance
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -102,11 +101,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $firstName
+     *
      * @return PaymentInstance
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -120,11 +121,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $lastName
+     *
      * @return PaymentInstance
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -138,11 +141,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $address
+     *
      * @return PaymentInstance
      */
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -156,11 +161,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $zipCode
+     *
      * @return PaymentInstance
      */
     public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
+
         return $this;
     }
 
@@ -174,11 +181,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $city
+     *
      * @return PaymentInstance
      */
     public function setCity($city)
     {
         $this->city = $city;
+
         return $this;
     }
 
@@ -192,11 +201,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $bankName
+     *
      * @return PaymentInstance
      */
     public function setBankName($bankName)
     {
         $this->bankName = $bankName;
+
         return $this;
     }
 
@@ -210,11 +221,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $bankCode
+     *
      * @return PaymentInstance
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
 
@@ -228,11 +241,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $accountNumber
+     *
      * @return PaymentInstance
      */
     public function setAccountNumber($accountNumber)
     {
         $this->accountNumber = $accountNumber;
+
         return $this;
     }
 
@@ -246,11 +261,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $accountHolder
+     *
      * @return PaymentInstance
      */
     public function setAccountHolder($accountHolder)
     {
         $this->accountHolder = $accountHolder;
+
         return $this;
     }
 
@@ -264,11 +281,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $bic
+     *
      * @return PaymentInstance
      */
     public function setBic($bic)
     {
         $this->bic = $bic;
+
         return $this;
     }
 
@@ -282,11 +301,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $iban
+     *
      * @return PaymentInstance
      */
     public function setIban($iban)
     {
         $this->iban = $iban;
+
         return $this;
     }
 
@@ -300,11 +321,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $amount
+     *
      * @return PaymentInstance
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
 
@@ -318,11 +341,13 @@ class PaymentInstance extends Base
 
     /**
      * @param string $createdAt
+     *
      * @return PaymentInstance
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 }

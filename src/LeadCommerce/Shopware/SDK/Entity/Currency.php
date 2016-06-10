@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Currency
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Currency extends Base
 {
@@ -34,7 +31,7 @@ class Currency extends Base
      */
     protected $default;
     /**
-     * @var double
+     * @var float
      */
     protected $factor;
     /**
@@ -60,11 +57,13 @@ class Currency extends Base
 
     /**
      * @param int $id
+     *
      * @return Currency
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -78,11 +77,13 @@ class Currency extends Base
 
     /**
      * @param string $currency
+     *
      * @return Currency
      */
     public function setCurrency($currency)
     {
         $this->currency = $currency;
+
         return $this;
     }
 
@@ -96,16 +97,18 @@ class Currency extends Base
 
     /**
      * @param string $name
+     *
      * @return Currency
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isDefault()
     {
@@ -113,12 +116,14 @@ class Currency extends Base
     }
 
     /**
-     * @param boolean $default
+     * @param bool $default
+     *
      * @return Currency
      */
     public function setDefault($default)
     {
         $this->default = $default;
+
         return $this;
     }
 
@@ -132,11 +137,13 @@ class Currency extends Base
 
     /**
      * @param float $factor
+     *
      * @return Currency
      */
     public function setFactor($factor)
     {
         $this->factor = $factor;
+
         return $this;
     }
 
@@ -150,11 +157,13 @@ class Currency extends Base
 
     /**
      * @param string $symbol
+     *
      * @return Currency
      */
     public function setSymbol($symbol)
     {
         $this->symbol = $symbol;
+
         return $this;
     }
 
@@ -168,11 +177,13 @@ class Currency extends Base
 
     /**
      * @param int $symbolPosition
+     *
      * @return Currency
      */
     public function setSymbolPosition($symbolPosition)
     {
         $this->symbolPosition = $symbolPosition;
+
         return $this;
     }
 
@@ -186,11 +197,13 @@ class Currency extends Base
 
     /**
      * @param int $position
+     *
      * @return Currency
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 }

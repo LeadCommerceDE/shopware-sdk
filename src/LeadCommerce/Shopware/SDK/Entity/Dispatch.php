@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Dispatch
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Dispatch extends Base
 {
@@ -58,7 +55,7 @@ class Dispatch extends Base
      */
     protected $taxCalculation;
     /**
-     * @var double
+     * @var float
      */
     protected $shippingFree;
     /**
@@ -116,11 +113,13 @@ class Dispatch extends Base
 
     /**
      * @param int $id
+     *
      * @return Dispatch
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -134,11 +133,13 @@ class Dispatch extends Base
 
     /**
      * @param string $name
+     *
      * @return Dispatch
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -152,11 +153,13 @@ class Dispatch extends Base
 
     /**
      * @param int $type
+     *
      * @return Dispatch
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -170,11 +173,13 @@ class Dispatch extends Base
 
     /**
      * @param string $description
+     *
      * @return Dispatch
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -188,16 +193,18 @@ class Dispatch extends Base
 
     /**
      * @param string $comment
+     *
      * @return Dispatch
      */
     public function setComment($comment)
     {
         $this->comment = $comment;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -205,12 +212,14 @@ class Dispatch extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return Dispatch
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
@@ -224,11 +233,13 @@ class Dispatch extends Base
 
     /**
      * @param int $position
+     *
      * @return Dispatch
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -242,11 +253,13 @@ class Dispatch extends Base
 
     /**
      * @param int $calculation
+     *
      * @return Dispatch
      */
     public function setCalculation($calculation)
     {
         $this->calculation = $calculation;
+
         return $this;
     }
 
@@ -260,11 +273,13 @@ class Dispatch extends Base
 
     /**
      * @param int $surchargeCalculation
+     *
      * @return Dispatch
      */
     public function setSurchargeCalculation($surchargeCalculation)
     {
         $this->surchargeCalculation = $surchargeCalculation;
+
         return $this;
     }
 
@@ -278,11 +293,13 @@ class Dispatch extends Base
 
     /**
      * @param int $taxCalculation
+     *
      * @return Dispatch
      */
     public function setTaxCalculation($taxCalculation)
     {
         $this->taxCalculation = $taxCalculation;
+
         return $this;
     }
 
@@ -296,11 +313,13 @@ class Dispatch extends Base
 
     /**
      * @param float $shippingFree
+     *
      * @return Dispatch
      */
     public function setShippingFree($shippingFree)
     {
         $this->shippingFree = $shippingFree;
+
         return $this;
     }
 
@@ -314,11 +333,13 @@ class Dispatch extends Base
 
     /**
      * @param int $multiShopId
+     *
      * @return Dispatch
      */
     public function setMultiShopId($multiShopId)
     {
         $this->multiShopId = $multiShopId;
+
         return $this;
     }
 
@@ -332,11 +353,13 @@ class Dispatch extends Base
 
     /**
      * @param int $customerGroupId
+     *
      * @return Dispatch
      */
     public function setCustomerGroupId($customerGroupId)
     {
         $this->customerGroupId = $customerGroupId;
+
         return $this;
     }
 
@@ -350,11 +373,13 @@ class Dispatch extends Base
 
     /**
      * @param int $bindShippingFree
+     *
      * @return Dispatch
      */
     public function setBindShippingFree($bindShippingFree)
     {
         $this->bindShippingFree = $bindShippingFree;
+
         return $this;
     }
 
@@ -368,11 +393,13 @@ class Dispatch extends Base
 
     /**
      * @param int $bindTimeFrom
+     *
      * @return Dispatch
      */
     public function setBindTimeFrom($bindTimeFrom)
     {
         $this->bindTimeFrom = $bindTimeFrom;
+
         return $this;
     }
 }

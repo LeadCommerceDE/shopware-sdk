@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Related
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Related extends Base
 {
@@ -36,11 +33,13 @@ class Related extends Base
 
     /**
      * @param int $id
+     *
      * @return Related
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class Related extends Base
 
     /**
      * @param string $name
+     *
      * @return Related
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PriceGroup
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PriceGroup extends Base
 {
@@ -27,11 +24,13 @@ class PriceGroup extends Base
 
     /**
      * @param int $id
+     *
      * @return PriceGroup
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -45,13 +44,16 @@ class PriceGroup extends Base
 
     /**
      * @param string $description
+     *
      * @return PriceGroup
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
+
     /**
      * @var int
      */

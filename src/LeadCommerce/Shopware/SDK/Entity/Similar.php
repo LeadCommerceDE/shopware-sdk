@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Similar
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Similar extends Base
 {
@@ -36,11 +33,13 @@ class Similar extends Base
 
     /**
      * @param int $id
+     *
      * @return Similar
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class Similar extends Base
 
     /**
      * @param string $name
+     *
      * @return Similar
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

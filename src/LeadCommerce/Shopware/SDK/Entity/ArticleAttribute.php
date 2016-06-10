@@ -7,12 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
 
 /**
  * Class Attribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class ArticleAttribute extends Base
 {
@@ -115,11 +113,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr1
+     *
      * @return ArticleAttribute
      */
     public function setAttr1($attr1)
     {
         $this->attr1 = $attr1;
+
         return $this;
     }
 
@@ -133,11 +133,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr2
+     *
      * @return ArticleAttribute
      */
     public function setAttr2($attr2)
     {
         $this->attr2 = $attr2;
+
         return $this;
     }
 
@@ -151,11 +153,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr3
+     *
      * @return ArticleAttribute
      */
     public function setAttr3($attr3)
     {
         $this->attr3 = $attr3;
+
         return $this;
     }
 
@@ -169,11 +173,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr4
+     *
      * @return ArticleAttribute
      */
     public function setAttr4($attr4)
     {
         $this->attr4 = $attr4;
+
         return $this;
     }
 
@@ -187,11 +193,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr5
+     *
      * @return ArticleAttribute
      */
     public function setAttr5($attr5)
     {
         $this->attr5 = $attr5;
+
         return $this;
     }
 
@@ -205,11 +213,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr6
+     *
      * @return ArticleAttribute
      */
     public function setAttr6($attr6)
     {
         $this->attr6 = $attr6;
+
         return $this;
     }
 
@@ -223,11 +233,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr7
+     *
      * @return ArticleAttribute
      */
     public function setAttr7($attr7)
     {
         $this->attr7 = $attr7;
+
         return $this;
     }
 
@@ -241,11 +253,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr8
+     *
      * @return ArticleAttribute
      */
     public function setAttr8($attr8)
     {
         $this->attr8 = $attr8;
+
         return $this;
     }
 
@@ -259,11 +273,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr9
+     *
      * @return ArticleAttribute
      */
     public function setAttr9($attr9)
     {
         $this->attr9 = $attr9;
+
         return $this;
     }
 
@@ -277,11 +293,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr10
+     *
      * @return ArticleAttribute
      */
     public function setAttr10($attr10)
     {
         $this->attr10 = $attr10;
+
         return $this;
     }
 
@@ -295,11 +313,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr11
+     *
      * @return ArticleAttribute
      */
     public function setAttr11($attr11)
     {
         $this->attr11 = $attr11;
+
         return $this;
     }
 
@@ -313,11 +333,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr12
+     *
      * @return ArticleAttribute
      */
     public function setAttr12($attr12)
     {
         $this->attr12 = $attr12;
+
         return $this;
     }
 
@@ -331,11 +353,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr13
+     *
      * @return ArticleAttribute
      */
     public function setAttr13($attr13)
     {
         $this->attr13 = $attr13;
+
         return $this;
     }
 
@@ -349,11 +373,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr14
+     *
      * @return ArticleAttribute
      */
     public function setAttr14($attr14)
     {
         $this->attr14 = $attr14;
+
         return $this;
     }
 
@@ -367,11 +393,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr15
+     *
      * @return ArticleAttribute
      */
     public function setAttr15($attr15)
     {
         $this->attr15 = $attr15;
+
         return $this;
     }
 
@@ -385,11 +413,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr16
+     *
      * @return ArticleAttribute
      */
     public function setAttr16($attr16)
     {
         $this->attr16 = $attr16;
+
         return $this;
     }
 
@@ -403,11 +433,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr17
+     *
      * @return ArticleAttribute
      */
     public function setAttr17($attr17)
     {
         $this->attr17 = $attr17;
+
         return $this;
     }
 
@@ -421,11 +453,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr18
+     *
      * @return ArticleAttribute
      */
     public function setAttr18($attr18)
     {
         $this->attr18 = $attr18;
+
         return $this;
     }
 
@@ -439,11 +473,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr19
+     *
      * @return ArticleAttribute
      */
     public function setAttr19($attr19)
     {
         $this->attr19 = $attr19;
+
         return $this;
     }
 
@@ -457,11 +493,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param mixed $attr20
+     *
      * @return ArticleAttribute
      */
     public function setAttr20($attr20)
     {
         $this->attr20 = $attr20;
+
         return $this;
     }
 
@@ -475,11 +513,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param int $articleId
+     *
      * @return ArticleAttribute
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -493,11 +533,13 @@ class ArticleAttribute extends Base
 
     /**
      * @param int $articleDetailId
+     *
      * @return ArticleAttribute
      */
     public function setArticleDetailId($articleDetailId)
     {
         $this->articleDetailId = $articleDetailId;
+
         return $this;
     }
 }

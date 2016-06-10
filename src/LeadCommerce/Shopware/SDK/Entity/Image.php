@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Image
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Image extends Base
 {
@@ -80,11 +77,13 @@ class Image extends Base
 
     /**
      * @param int $id
+     *
      * @return Image
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -98,11 +97,13 @@ class Image extends Base
 
     /**
      * @param int $articleId
+     *
      * @return Image
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -116,11 +117,13 @@ class Image extends Base
 
     /**
      * @param int $articleDetailId
+     *
      * @return Image
      */
     public function setArticleDetailId($articleDetailId)
     {
         $this->articleDetailId = $articleDetailId;
+
         return $this;
     }
 
@@ -134,11 +137,13 @@ class Image extends Base
 
     /**
      * @param string $description
+     *
      * @return Image
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -152,11 +157,13 @@ class Image extends Base
 
     /**
      * @param string $path
+     *
      * @return Image
      */
     public function setPath($path)
     {
         $this->path = $path;
+
         return $this;
     }
 
@@ -170,11 +177,13 @@ class Image extends Base
 
     /**
      * @param int $main
+     *
      * @return Image
      */
     public function setMain($main)
     {
         $this->main = $main;
+
         return $this;
     }
 
@@ -188,11 +197,13 @@ class Image extends Base
 
     /**
      * @param int $position
+     *
      * @return Image
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -206,11 +217,13 @@ class Image extends Base
 
     /**
      * @param int $width
+     *
      * @return Image
      */
     public function setWidth($width)
     {
         $this->width = $width;
+
         return $this;
     }
 
@@ -224,11 +237,13 @@ class Image extends Base
 
     /**
      * @param int $height
+     *
      * @return Image
      */
     public function setHeight($height)
     {
         $this->height = $height;
+
         return $this;
     }
 
@@ -242,11 +257,13 @@ class Image extends Base
 
     /**
      * @param string $relations
+     *
      * @return Image
      */
     public function setRelations($relations)
     {
         $this->relations = $relations;
+
         return $this;
     }
 
@@ -260,11 +277,13 @@ class Image extends Base
 
     /**
      * @param string $extension
+     *
      * @return Image
      */
     public function setExtension($extension)
     {
         $this->extension = $extension;
+
         return $this;
     }
 
@@ -278,11 +297,13 @@ class Image extends Base
 
     /**
      * @param int $parentId
+     *
      * @return Image
      */
     public function setParentId($parentId)
     {
         $this->parentId = $parentId;
+
         return $this;
     }
 
@@ -296,11 +317,13 @@ class Image extends Base
 
     /**
      * @param int $mediaId
+     *
      * @return Image
      */
     public function setMediaId($mediaId)
     {
         $this->mediaId = $mediaId;
+
         return $this;
     }
 }

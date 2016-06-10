@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Shop
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Shop extends Base
 {
@@ -100,11 +97,13 @@ class Shop extends Base
 
     /**
      * @param int $id
+     *
      * @return Shop
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -118,11 +117,13 @@ class Shop extends Base
 
     /**
      * @param int $mainId
+     *
      * @return Shop
      */
     public function setMainId($mainId)
     {
         $this->mainId = $mainId;
+
         return $this;
     }
 
@@ -136,11 +137,13 @@ class Shop extends Base
 
     /**
      * @param int $categoryId
+     *
      * @return Shop
      */
     public function setCategoryId($categoryId)
     {
         $this->categoryId = $categoryId;
+
         return $this;
     }
 
@@ -154,11 +157,13 @@ class Shop extends Base
 
     /**
      * @param string $name
+     *
      * @return Shop
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -172,11 +177,13 @@ class Shop extends Base
 
     /**
      * @param string $title
+     *
      * @return Shop
      */
     public function setTitle($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -190,11 +197,13 @@ class Shop extends Base
 
     /**
      * @param int $position
+     *
      * @return Shop
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -208,11 +217,13 @@ class Shop extends Base
 
     /**
      * @param string $host
+     *
      * @return Shop
      */
     public function setHost($host)
     {
         $this->host = $host;
+
         return $this;
     }
 
@@ -226,11 +237,13 @@ class Shop extends Base
 
     /**
      * @param string $basePath
+     *
      * @return Shop
      */
     public function setBasePath($basePath)
     {
         $this->basePath = $basePath;
+
         return $this;
     }
 
@@ -244,11 +257,13 @@ class Shop extends Base
 
     /**
      * @param string $baseUrl
+     *
      * @return Shop
      */
     public function setBaseUrl($baseUrl)
     {
         $this->baseUrl = $baseUrl;
+
         return $this;
     }
 
@@ -262,16 +277,18 @@ class Shop extends Base
 
     /**
      * @param string $hosts
+     *
      * @return Shop
      */
     public function setHosts($hosts)
     {
         $this->hosts = $hosts;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isSecure()
     {
@@ -279,17 +296,19 @@ class Shop extends Base
     }
 
     /**
-     * @param boolean $secure
+     * @param bool $secure
+     *
      * @return Shop
      */
     public function setSecure($secure)
     {
         $this->secure = $secure;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isAlwaysSecure()
     {
@@ -297,12 +316,14 @@ class Shop extends Base
     }
 
     /**
-     * @param boolean $alwaysSecure
+     * @param bool $alwaysSecure
+     *
      * @return Shop
      */
     public function setAlwaysSecure($alwaysSecure)
     {
         $this->alwaysSecure = $alwaysSecure;
+
         return $this;
     }
 
@@ -316,11 +337,13 @@ class Shop extends Base
 
     /**
      * @param string $secureHost
+     *
      * @return Shop
      */
     public function setSecureHost($secureHost)
     {
         $this->secureHost = $secureHost;
+
         return $this;
     }
 
@@ -334,16 +357,18 @@ class Shop extends Base
 
     /**
      * @param string $secureBasePath
+     *
      * @return Shop
      */
     public function setSecureBasePath($secureBasePath)
     {
         $this->secureBasePath = $secureBasePath;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isDefault()
     {
@@ -351,17 +376,19 @@ class Shop extends Base
     }
 
     /**
-     * @param boolean $default
+     * @param bool $default
+     *
      * @return Shop
      */
     public function setDefault($default)
     {
         $this->default = $default;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -369,12 +396,14 @@ class Shop extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return Shop
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 }
