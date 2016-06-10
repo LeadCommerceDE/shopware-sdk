@@ -11,6 +11,14 @@ class CacheQuery extends Base
      */
     protected function getClass()
     {
-        return 'stdClass';
+        return 'LeadCommerce\\Shopware\\SDK\\Entity\\Cache';
+    }
+
+    /**
+     * @return string
+     */
+    protected function getQueryPath()
+    {
+        return 'caches';
     }
 }
