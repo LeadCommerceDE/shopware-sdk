@@ -11,7 +11,30 @@
 namespace LeadCommerce\Shopware\SDK\Entity;
 
 
+/**
+ * Class Download
+ * @package LeadCommerce\Shopware\SDK\Entity
+ */
 class Download extends Base
 {
-
+    /**
+     * @var int
+     */
+    protected $id;
+    /**
+     * @var int
+     */
+    protected $articleId;
+    /**
+     * @var string
+     */
+    protected $name;
+    /**
+     * @var string
+     */
+    protected $file;
+    /**
+     * @var int
+     */
+    protected $size;
 }
