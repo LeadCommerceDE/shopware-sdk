@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class ConfiguratorSet
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class ConfiguratorSet extends Base
 {
@@ -48,11 +45,13 @@ class ConfiguratorSet extends Base
 
     /**
      * @param int $id
+     *
      * @return ConfiguratorSet
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,16 +65,18 @@ class ConfiguratorSet extends Base
 
     /**
      * @param string $name
+     *
      * @return ConfiguratorSet
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isPublic()
     {
@@ -83,12 +84,14 @@ class ConfiguratorSet extends Base
     }
 
     /**
-     * @param boolean $public
+     * @param bool $public
+     *
      * @return ConfiguratorSet
      */
     public function setPublic($public)
     {
         $this->public = $public;
+
         return $this;
     }
 
@@ -102,11 +105,13 @@ class ConfiguratorSet extends Base
 
     /**
      * @param int $type
+     *
      * @return ConfiguratorSet
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -120,11 +125,13 @@ class ConfiguratorSet extends Base
 
     /**
      * @param ConfiguratorGroup[] $groups
+     *
      * @return ConfiguratorSet
      */
     public function setGroups($groups)
     {
         $this->groups = $groups;
+
         return $this;
     }
 }

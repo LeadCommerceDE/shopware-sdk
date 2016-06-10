@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class State
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class State extends Base
 {
@@ -52,11 +49,13 @@ class State extends Base
 
     /**
      * @param int $id
+     *
      * @return State
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -70,11 +69,13 @@ class State extends Base
 
     /**
      * @param int $countryId
+     *
      * @return State
      */
     public function setCountryId($countryId)
     {
         $this->countryId = $countryId;
+
         return $this;
     }
 
@@ -88,11 +89,13 @@ class State extends Base
 
     /**
      * @param int $position
+     *
      * @return State
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -106,11 +109,13 @@ class State extends Base
 
     /**
      * @param string $name
+     *
      * @return State
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -124,16 +129,18 @@ class State extends Base
 
     /**
      * @param string $shortCode
+     *
      * @return State
      */
     public function setShortCode($shortCode)
     {
         $this->shortCode = $shortCode;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -141,12 +148,14 @@ class State extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return State
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 }

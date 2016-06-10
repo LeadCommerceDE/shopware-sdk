@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Document
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Document extends Base
 {
@@ -38,7 +35,7 @@ class Document extends Base
      */
     protected $orderId;
     /**
-     * @var double
+     * @var float
      */
     protected $amount;
     /**
@@ -68,11 +65,13 @@ class Document extends Base
 
     /**
      * @param int $id
+     *
      * @return Document
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -86,11 +85,13 @@ class Document extends Base
 
     /**
      * @param string $date
+     *
      * @return Document
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -104,11 +105,13 @@ class Document extends Base
 
     /**
      * @param int $typeId
+     *
      * @return Document
      */
     public function setTypeId($typeId)
     {
         $this->typeId = $typeId;
+
         return $this;
     }
 
@@ -122,11 +125,13 @@ class Document extends Base
 
     /**
      * @param int $customerId
+     *
      * @return Document
      */
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
         return $this;
     }
 
@@ -140,11 +145,13 @@ class Document extends Base
 
     /**
      * @param int $orderId
+     *
      * @return Document
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -158,11 +165,13 @@ class Document extends Base
 
     /**
      * @param float $amount
+     *
      * @return Document
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
 
@@ -176,11 +185,13 @@ class Document extends Base
 
     /**
      * @param int $documentId
+     *
      * @return Document
      */
     public function setDocumentId($documentId)
     {
         $this->documentId = $documentId;
+
         return $this;
     }
 
@@ -194,11 +205,13 @@ class Document extends Base
 
     /**
      * @param string $hash
+     *
      * @return Document
      */
     public function setHash($hash)
     {
         $this->hash = $hash;
+
         return $this;
     }
 
@@ -212,11 +225,13 @@ class Document extends Base
 
     /**
      * @param DocumentType $type
+     *
      * @return Document
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -230,11 +245,13 @@ class Document extends Base
 
     /**
      * @param DocumentAttribute $attribute
+     *
      * @return Document
      */
     public function setAttribute($attribute)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

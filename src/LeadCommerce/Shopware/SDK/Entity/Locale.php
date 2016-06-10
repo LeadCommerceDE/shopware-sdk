@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Locale
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Locale extends Base
 {
@@ -44,11 +41,13 @@ class Locale extends Base
 
     /**
      * @param int $id
+     *
      * @return Locale
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -62,11 +61,13 @@ class Locale extends Base
 
     /**
      * @param string $locale
+     *
      * @return Locale
      */
     public function setLocale($locale)
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -80,11 +81,13 @@ class Locale extends Base
 
     /**
      * @param string $language
+     *
      * @return Locale
      */
     public function setLanguage($language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -98,11 +101,13 @@ class Locale extends Base
 
     /**
      * @param string $territory
+     *
      * @return Locale
      */
     public function setTerritory($territory)
     {
         $this->territory = $territory;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Tax
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Tax extends Base
 {
@@ -40,11 +37,13 @@ class Tax extends Base
 
     /**
      * @param int $id
+     *
      * @return Tax
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -58,11 +57,13 @@ class Tax extends Base
 
     /**
      * @param string $tax
+     *
      * @return Tax
      */
     public function setTax($tax)
     {
         $this->tax = $tax;
+
         return $this;
     }
 
@@ -76,11 +77,13 @@ class Tax extends Base
 
     /**
      * @param string $name
+     *
      * @return Tax
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

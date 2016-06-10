@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Category
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Category extends Base
 {
@@ -36,11 +33,13 @@ class Category extends Base
 
     /**
      * @param int $id
+     *
      * @return Category
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class Category extends Base
 
     /**
      * @param string $name
+     *
      * @return Category
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 }

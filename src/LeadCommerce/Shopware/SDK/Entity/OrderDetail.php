@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class OrderDetail
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class OrderDetail extends Base
 {
@@ -34,7 +31,7 @@ class OrderDetail extends Base
      */
     protected $taxId;
     /**
-     * @var double
+     * @var float
      */
     protected $taxRate;
     /**
@@ -50,7 +47,7 @@ class OrderDetail extends Base
      */
     protected $articleNumber;
     /**
-     * @var double
+     * @var float
      */
     protected $price;
     /**
@@ -62,7 +59,7 @@ class OrderDetail extends Base
      */
     protected $articleName;
     /**
-     * @var boolean
+     * @var bool
      */
     protected $shipped;
     /**
@@ -112,11 +109,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $id
+     *
      * @return OrderDetail
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -130,11 +129,13 @@ class OrderDetail extends Base
 
     /**
      * @param string $orderId
+     *
      * @return OrderDetail
      */
     public function setOrderId($orderId)
     {
         $this->orderId = $orderId;
+
         return $this;
     }
 
@@ -148,11 +149,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $articleId
+     *
      * @return OrderDetail
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -166,11 +169,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $taxId
+     *
      * @return OrderDetail
      */
     public function setTaxId($taxId)
     {
         $this->taxId = $taxId;
+
         return $this;
     }
 
@@ -184,11 +189,13 @@ class OrderDetail extends Base
 
     /**
      * @param float $taxRate
+     *
      * @return OrderDetail
      */
     public function setTaxRate($taxRate)
     {
         $this->taxRate = $taxRate;
+
         return $this;
     }
 
@@ -202,11 +209,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $statusId
+     *
      * @return OrderDetail
      */
     public function setStatusId($statusId)
     {
         $this->statusId = $statusId;
+
         return $this;
     }
 
@@ -220,11 +229,13 @@ class OrderDetail extends Base
 
     /**
      * @param string $number
+     *
      * @return OrderDetail
      */
     public function setNumber($number)
     {
         $this->number = $number;
+
         return $this;
     }
 
@@ -238,11 +249,13 @@ class OrderDetail extends Base
 
     /**
      * @param string $articleNumber
+     *
      * @return OrderDetail
      */
     public function setArticleNumber($articleNumber)
     {
         $this->articleNumber = $articleNumber;
+
         return $this;
     }
 
@@ -256,11 +269,13 @@ class OrderDetail extends Base
 
     /**
      * @param float $price
+     *
      * @return OrderDetail
      */
     public function setPrice($price)
     {
         $this->price = $price;
+
         return $this;
     }
 
@@ -274,11 +289,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $quantity
+     *
      * @return OrderDetail
      */
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 
@@ -292,16 +309,18 @@ class OrderDetail extends Base
 
     /**
      * @param string $articleName
+     *
      * @return OrderDetail
      */
     public function setArticleName($articleName)
     {
         $this->articleName = $articleName;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isShipped()
     {
@@ -309,12 +328,14 @@ class OrderDetail extends Base
     }
 
     /**
-     * @param boolean $shipped
+     * @param bool $shipped
+     *
      * @return OrderDetail
      */
     public function setShipped($shipped)
     {
         $this->shipped = $shipped;
+
         return $this;
     }
 
@@ -328,11 +349,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $shippedGroup
+     *
      * @return OrderDetail
      */
     public function setShippedGroup($shippedGroup)
     {
         $this->shippedGroup = $shippedGroup;
+
         return $this;
     }
 
@@ -346,11 +369,13 @@ class OrderDetail extends Base
 
     /**
      * @param string $releaseDate
+     *
      * @return OrderDetail
      */
     public function setReleaseDate($releaseDate)
     {
         $this->releaseDate = $releaseDate;
+
         return $this;
     }
 
@@ -364,11 +389,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $mode
+     *
      * @return OrderDetail
      */
     public function setMode($mode)
     {
         $this->mode = $mode;
+
         return $this;
     }
 
@@ -382,11 +409,13 @@ class OrderDetail extends Base
 
     /**
      * @param int $esdArticle
+     *
      * @return OrderDetail
      */
     public function setEsdArticle($esdArticle)
     {
         $this->esdArticle = $esdArticle;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PaymentData
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PaymentData extends Base
 {
@@ -68,11 +65,13 @@ class PaymentData extends Base
 
     /**
      * @param int $id
+     *
      * @return PaymentData
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -86,11 +85,13 @@ class PaymentData extends Base
 
     /**
      * @param int $paymentMeanId
+     *
      * @return PaymentData
      */
     public function setPaymentMeanId($paymentMeanId)
     {
         $this->paymentMeanId = $paymentMeanId;
+
         return $this;
     }
 
@@ -104,11 +105,13 @@ class PaymentData extends Base
 
     /**
      * @param string $useBillingData
+     *
      * @return PaymentData
      */
     public function setUseBillingData($useBillingData)
     {
         $this->useBillingData = $useBillingData;
+
         return $this;
     }
 
@@ -122,11 +125,13 @@ class PaymentData extends Base
 
     /**
      * @param string $bankName
+     *
      * @return PaymentData
      */
     public function setBankName($bankName)
     {
         $this->bankName = $bankName;
+
         return $this;
     }
 
@@ -140,11 +145,13 @@ class PaymentData extends Base
 
     /**
      * @param string $bic
+     *
      * @return PaymentData
      */
     public function setBic($bic)
     {
         $this->bic = $bic;
+
         return $this;
     }
 
@@ -158,11 +165,13 @@ class PaymentData extends Base
 
     /**
      * @param string $iban
+     *
      * @return PaymentData
      */
     public function setIban($iban)
     {
         $this->iban = $iban;
+
         return $this;
     }
 
@@ -176,11 +185,13 @@ class PaymentData extends Base
 
     /**
      * @param string $accountNumber
+     *
      * @return PaymentData
      */
     public function setAccountNumber($accountNumber)
     {
         $this->accountNumber = $accountNumber;
+
         return $this;
     }
 
@@ -194,11 +205,13 @@ class PaymentData extends Base
 
     /**
      * @param string $bankCode
+     *
      * @return PaymentData
      */
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+
         return $this;
     }
 
@@ -212,11 +225,13 @@ class PaymentData extends Base
 
     /**
      * @param string $accountHolder
+     *
      * @return PaymentData
      */
     public function setAccountHolder($accountHolder)
     {
         $this->accountHolder = $accountHolder;
+
         return $this;
     }
 
@@ -230,11 +245,13 @@ class PaymentData extends Base
 
     /**
      * @param string $createdAt
+     *
      * @return PaymentData
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 }

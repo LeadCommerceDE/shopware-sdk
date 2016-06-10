@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Supplier
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Supplier extends Base
 {
@@ -60,11 +57,13 @@ class Supplier extends Base
 
     /**
      * @param int $id
+     *
      * @return Supplier
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -78,11 +77,13 @@ class Supplier extends Base
 
     /**
      * @param string $name
+     *
      * @return Supplier
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -96,11 +97,13 @@ class Supplier extends Base
 
     /**
      * @param string $image
+     *
      * @return Supplier
      */
     public function setImage($image)
     {
         $this->image = $image;
+
         return $this;
     }
 
@@ -114,11 +117,13 @@ class Supplier extends Base
 
     /**
      * @param string $link
+     *
      * @return Supplier
      */
     public function setLink($link)
     {
         $this->link = $link;
+
         return $this;
     }
 
@@ -132,11 +137,13 @@ class Supplier extends Base
 
     /**
      * @param string $description
+     *
      * @return Supplier
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -150,11 +157,13 @@ class Supplier extends Base
 
     /**
      * @param string $metaTitle
+     *
      * @return Supplier
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -168,11 +177,13 @@ class Supplier extends Base
 
     /**
      * @param string $metaDescription
+     *
      * @return Supplier
      */
     public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
+
         return $this;
     }
 
@@ -186,11 +197,13 @@ class Supplier extends Base
 
     /**
      * @param string $metaKeywords
+     *
      * @return Supplier
      */
     public function setMetaKeywords($metaKeywords)
     {
         $this->metaKeywords = $metaKeywords;
+
         return $this;
     }
 }

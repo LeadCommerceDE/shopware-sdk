@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class DocumentAttribute
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class DocumentAttribute extends Base
 {
@@ -36,11 +33,13 @@ class DocumentAttribute extends Base
 
     /**
      * @param int $id
+     *
      * @return DocumentAttribute
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -54,11 +53,13 @@ class DocumentAttribute extends Base
 
     /**
      * @param int $documentId
+     *
      * @return DocumentAttribute
      */
     public function setDocumentId($documentId)
     {
         $this->documentId = $documentId;
+
         return $this;
     }
 }

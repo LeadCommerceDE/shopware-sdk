@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Link
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Link extends Base
 {
@@ -48,11 +45,13 @@ class Link extends Base
 
     /**
      * @param int $id
+     *
      * @return Link
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +65,13 @@ class Link extends Base
 
     /**
      * @param int $articleId
+     *
      * @return Link
      */
     public function setArticleId($articleId)
     {
         $this->articleId = $articleId;
+
         return $this;
     }
 
@@ -84,11 +85,13 @@ class Link extends Base
 
     /**
      * @param string $name
+     *
      * @return Link
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -102,11 +105,13 @@ class Link extends Base
 
     /**
      * @param string $link
+     *
      * @return Link
      */
     public function setLink($link)
     {
         $this->link = $link;
+
         return $this;
     }
 
@@ -120,11 +125,13 @@ class Link extends Base
 
     /**
      * @param string $target
+     *
      * @return Link
      */
     public function setTarget($target)
     {
         $this->target = $target;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class CustomerGroup
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class CustomerGroup extends Base
 {
@@ -42,23 +39,23 @@ class CustomerGroup extends Base
      */
     protected $mode;
     /**
-     * @var double
+     * @var float
      */
     protected $discount;
     /**
-     * @var double
+     * @var float
      */
     protected $minimumOrder;
     /**
-     * @var double
+     * @var float
      */
     protected $minimumOrderSurcharge;
     /**
-     * @var double
+     * @var float
      */
     protected $basePrice;
     /**
-     * @var double
+     * @var float
      */
     protected $percent;
 
@@ -72,11 +69,13 @@ class CustomerGroup extends Base
 
     /**
      * @param int $id
+     *
      * @return CustomerGroup
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -90,11 +89,13 @@ class CustomerGroup extends Base
 
     /**
      * @param string $key
+     *
      * @return CustomerGroup
      */
     public function setKey($key)
     {
         $this->key = $key;
+
         return $this;
     }
 
@@ -108,16 +109,18 @@ class CustomerGroup extends Base
 
     /**
      * @param string $name
+     *
      * @return CustomerGroup
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isTax()
     {
@@ -125,17 +128,19 @@ class CustomerGroup extends Base
     }
 
     /**
-     * @param boolean $tax
+     * @param bool $tax
+     *
      * @return CustomerGroup
      */
     public function setTax($tax)
     {
         $this->tax = $tax;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isTaxInput()
     {
@@ -143,17 +148,19 @@ class CustomerGroup extends Base
     }
 
     /**
-     * @param boolean $taxInput
+     * @param bool $taxInput
+     *
      * @return CustomerGroup
      */
     public function setTaxInput($taxInput)
     {
         $this->taxInput = $taxInput;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isMode()
     {
@@ -161,12 +168,14 @@ class CustomerGroup extends Base
     }
 
     /**
-     * @param boolean $mode
+     * @param bool $mode
+     *
      * @return CustomerGroup
      */
     public function setMode($mode)
     {
         $this->mode = $mode;
+
         return $this;
     }
 
@@ -180,11 +189,13 @@ class CustomerGroup extends Base
 
     /**
      * @param float $discount
+     *
      * @return CustomerGroup
      */
     public function setDiscount($discount)
     {
         $this->discount = $discount;
+
         return $this;
     }
 
@@ -198,11 +209,13 @@ class CustomerGroup extends Base
 
     /**
      * @param float $minimumOrder
+     *
      * @return CustomerGroup
      */
     public function setMinimumOrder($minimumOrder)
     {
         $this->minimumOrder = $minimumOrder;
+
         return $this;
     }
 
@@ -216,11 +229,13 @@ class CustomerGroup extends Base
 
     /**
      * @param float $minimumOrderSurcharge
+     *
      * @return CustomerGroup
      */
     public function setMinimumOrderSurcharge($minimumOrderSurcharge)
     {
         $this->minimumOrderSurcharge = $minimumOrderSurcharge;
+
         return $this;
     }
 
@@ -234,11 +249,13 @@ class CustomerGroup extends Base
 
     /**
      * @param float $basePrice
+     *
      * @return CustomerGroup
      */
     public function setBasePrice($basePrice)
     {
         $this->basePrice = $basePrice;
+
         return $this;
     }
 
@@ -252,11 +269,13 @@ class CustomerGroup extends Base
 
     /**
      * @param float $percent
+     *
      * @return CustomerGroup
      */
     public function setPercent($percent)
     {
         $this->percent = $percent;
+
         return $this;
     }
 }

@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Translation
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Translation extends Base
 {
@@ -136,11 +133,13 @@ class Translation extends Base
 
     /**
      * @param string $metaTitle
+     *
      * @return Translation
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -154,11 +153,13 @@ class Translation extends Base
 
     /**
      * @param string $attr1
+     *
      * @return Translation
      */
     public function setAttr1($attr1)
     {
         $this->attr1 = $attr1;
+
         return $this;
     }
 
@@ -172,11 +173,13 @@ class Translation extends Base
 
     /**
      * @param string $attr2
+     *
      * @return Translation
      */
     public function setAttr2($attr2)
     {
         $this->attr2 = $attr2;
+
         return $this;
     }
 
@@ -190,11 +193,13 @@ class Translation extends Base
 
     /**
      * @param string $attr3
+     *
      * @return Translation
      */
     public function setAttr3($attr3)
     {
         $this->attr3 = $attr3;
+
         return $this;
     }
 
@@ -208,11 +213,13 @@ class Translation extends Base
 
     /**
      * @param string $attr4
+     *
      * @return Translation
      */
     public function setAttr4($attr4)
     {
         $this->attr4 = $attr4;
+
         return $this;
     }
 
@@ -226,11 +233,13 @@ class Translation extends Base
 
     /**
      * @param string $attr5
+     *
      * @return Translation
      */
     public function setAttr5($attr5)
     {
         $this->attr5 = $attr5;
+
         return $this;
     }
 
@@ -244,11 +253,13 @@ class Translation extends Base
 
     /**
      * @param string $attr6
+     *
      * @return Translation
      */
     public function setAttr6($attr6)
     {
         $this->attr6 = $attr6;
+
         return $this;
     }
 
@@ -262,11 +273,13 @@ class Translation extends Base
 
     /**
      * @param string $attr7
+     *
      * @return Translation
      */
     public function setAttr7($attr7)
     {
         $this->attr7 = $attr7;
+
         return $this;
     }
 
@@ -280,11 +293,13 @@ class Translation extends Base
 
     /**
      * @param string $attr8
+     *
      * @return Translation
      */
     public function setAttr8($attr8)
     {
         $this->attr8 = $attr8;
+
         return $this;
     }
 
@@ -298,11 +313,13 @@ class Translation extends Base
 
     /**
      * @param string $attr9
+     *
      * @return Translation
      */
     public function setAttr9($attr9)
     {
         $this->attr9 = $attr9;
+
         return $this;
     }
 
@@ -316,11 +333,13 @@ class Translation extends Base
 
     /**
      * @param string $attr10
+     *
      * @return Translation
      */
     public function setAttr10($attr10)
     {
         $this->attr10 = $attr10;
+
         return $this;
     }
 
@@ -334,11 +353,13 @@ class Translation extends Base
 
     /**
      * @param string $attr11
+     *
      * @return Translation
      */
     public function setAttr11($attr11)
     {
         $this->attr11 = $attr11;
+
         return $this;
     }
 
@@ -352,11 +373,13 @@ class Translation extends Base
 
     /**
      * @param string $attr12
+     *
      * @return Translation
      */
     public function setAttr12($attr12)
     {
         $this->attr12 = $attr12;
+
         return $this;
     }
 
@@ -370,11 +393,13 @@ class Translation extends Base
 
     /**
      * @param string $attr13
+     *
      * @return Translation
      */
     public function setAttr13($attr13)
     {
         $this->attr13 = $attr13;
+
         return $this;
     }
 
@@ -388,11 +413,13 @@ class Translation extends Base
 
     /**
      * @param string $attr14
+     *
      * @return Translation
      */
     public function setAttr14($attr14)
     {
         $this->attr14 = $attr14;
+
         return $this;
     }
 }

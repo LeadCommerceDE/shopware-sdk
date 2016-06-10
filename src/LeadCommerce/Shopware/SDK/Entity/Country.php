@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Country
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Country extends Base
 {
@@ -92,11 +89,13 @@ class Country extends Base
 
     /**
      * @param int $id
+     *
      * @return Country
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -110,11 +109,13 @@ class Country extends Base
 
     /**
      * @param string $name
+     *
      * @return Country
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -128,11 +129,13 @@ class Country extends Base
 
     /**
      * @param string $iso
+     *
      * @return Country
      */
     public function setIso($iso)
     {
         $this->iso = $iso;
+
         return $this;
     }
 
@@ -146,11 +149,13 @@ class Country extends Base
 
     /**
      * @param string $isoName
+     *
      * @return Country
      */
     public function setIsoName($isoName)
     {
         $this->isoName = $isoName;
+
         return $this;
     }
 
@@ -164,11 +169,13 @@ class Country extends Base
 
     /**
      * @param int $position
+     *
      * @return Country
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -182,16 +189,18 @@ class Country extends Base
 
     /**
      * @param string $description
+     *
      * @return Country
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isShippingFree()
     {
@@ -199,17 +208,19 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $shippingFree
+     * @param bool $shippingFree
+     *
      * @return Country
      */
     public function setShippingFree($shippingFree)
     {
         $this->shippingFree = $shippingFree;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isTaxFree()
     {
@@ -217,17 +228,19 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $taxFree
+     * @param bool $taxFree
+     *
      * @return Country
      */
     public function setTaxFree($taxFree)
     {
         $this->taxFree = $taxFree;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isTaxFreeUstId()
     {
@@ -235,17 +248,19 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $taxFreeUstId
+     * @param bool $taxFreeUstId
+     *
      * @return Country
      */
     public function setTaxFreeUstId($taxFreeUstId)
     {
         $this->taxFreeUstId = $taxFreeUstId;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isTaxFreeUstIdChecked()
     {
@@ -253,17 +268,19 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $taxFreeUstIdChecked
+     * @param bool $taxFreeUstIdChecked
+     *
      * @return Country
      */
     public function setTaxFreeUstIdChecked($taxFreeUstIdChecked)
     {
         $this->taxFreeUstIdChecked = $taxFreeUstIdChecked;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -271,12 +288,14 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return Country
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
@@ -290,16 +309,18 @@ class Country extends Base
 
     /**
      * @param string $iso3
+     *
      * @return Country
      */
     public function setIso3($iso3)
     {
         $this->iso3 = $iso3;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isDisplayStateInRegistration()
     {
@@ -307,17 +328,19 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $displayStateInRegistration
+     * @param bool $displayStateInRegistration
+     *
      * @return Country
      */
     public function setDisplayStateInRegistration($displayStateInRegistration)
     {
         $this->displayStateInRegistration = $displayStateInRegistration;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isForceStateInRegistration()
     {
@@ -325,12 +348,14 @@ class Country extends Base
     }
 
     /**
-     * @param boolean $forceStateInRegistration
+     * @param bool $forceStateInRegistration
+     *
      * @return Country
      */
     public function setForceStateInRegistration($forceStateInRegistration)
     {
         $this->forceStateInRegistration = $forceStateInRegistration;
+
         return $this;
     }
 
@@ -344,11 +369,13 @@ class Country extends Base
 
     /**
      * @param int $areaId
+     *
      * @return Country
      */
     public function setAreaId($areaId)
     {
         $this->areaId = $areaId;
+
         return $this;
     }
 
@@ -362,11 +389,13 @@ class Country extends Base
 
     /**
      * @param State[] $states
+     *
      * @return Country
      */
     public function setStates($states)
     {
         $this->states = $states;
+
         return $this;
     }
 }

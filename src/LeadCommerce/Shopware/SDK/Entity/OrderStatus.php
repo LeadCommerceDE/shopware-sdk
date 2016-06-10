@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class OrderStatus
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class OrderStatus extends Base
 {
@@ -48,11 +45,13 @@ class OrderStatus extends Base
 
     /**
      * @param int $id
+     *
      * @return OrderStatus
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +65,13 @@ class OrderStatus extends Base
 
     /**
      * @param string $description
+     *
      * @return OrderStatus
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -84,11 +85,13 @@ class OrderStatus extends Base
 
     /**
      * @param int $position
+     *
      * @return OrderStatus
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -102,16 +105,18 @@ class OrderStatus extends Base
 
     /**
      * @param string $group
+     *
      * @return OrderStatus
      */
     public function setGroup($group)
     {
         $this->group = $group;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isSendMail()
     {
@@ -119,12 +124,14 @@ class OrderStatus extends Base
     }
 
     /**
-     * @param boolean $sendMail
+     * @param bool $sendMail
+     *
      * @return OrderStatus
      */
     public function setSendMail($sendMail)
     {
         $this->sendMail = $sendMail;
+
         return $this;
     }
 }

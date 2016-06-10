@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class DocumentType
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class DocumentType extends Base
 {
@@ -64,11 +61,13 @@ class DocumentType extends Base
 
     /**
      * @param int $id
+     *
      * @return DocumentType
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -82,11 +81,13 @@ class DocumentType extends Base
 
     /**
      * @param string $name
+     *
      * @return DocumentType
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -100,11 +101,13 @@ class DocumentType extends Base
 
     /**
      * @param string $template
+     *
      * @return DocumentType
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+
         return $this;
     }
 
@@ -118,11 +121,13 @@ class DocumentType extends Base
 
     /**
      * @param string $numbers
+     *
      * @return DocumentType
      */
     public function setNumbers($numbers)
     {
         $this->numbers = $numbers;
+
         return $this;
     }
 
@@ -136,11 +141,13 @@ class DocumentType extends Base
 
     /**
      * @param int $left
+     *
      * @return DocumentType
      */
     public function setLeft($left)
     {
         $this->left = $left;
+
         return $this;
     }
 
@@ -154,11 +161,13 @@ class DocumentType extends Base
 
     /**
      * @param int $right
+     *
      * @return DocumentType
      */
     public function setRight($right)
     {
         $this->right = $right;
+
         return $this;
     }
 
@@ -172,11 +181,13 @@ class DocumentType extends Base
 
     /**
      * @param int $top
+     *
      * @return DocumentType
      */
     public function setTop($top)
     {
         $this->top = $top;
+
         return $this;
     }
 
@@ -190,11 +201,13 @@ class DocumentType extends Base
 
     /**
      * @param int $bottom
+     *
      * @return DocumentType
      */
     public function setBottom($bottom)
     {
         $this->bottom = $bottom;
+
         return $this;
     }
 
@@ -208,11 +221,13 @@ class DocumentType extends Base
 
     /**
      * @param int $pageBreak
+     *
      * @return DocumentType
      */
     public function setPageBreak($pageBreak)
     {
         $this->pageBreak = $pageBreak;
+
         return $this;
     }
 }

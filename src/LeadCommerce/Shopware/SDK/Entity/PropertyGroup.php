@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PropertyGroup
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PropertyGroup extends Base
 {
@@ -48,11 +45,13 @@ class PropertyGroup extends Base
 
     /**
      * @param int $id
+     *
      * @return PropertyGroup
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +65,13 @@ class PropertyGroup extends Base
 
     /**
      * @param string $name
+     *
      * @return PropertyGroup
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -84,16 +85,18 @@ class PropertyGroup extends Base
 
     /**
      * @param int $position
+     *
      * @return PropertyGroup
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isComparable()
     {
@@ -101,12 +104,14 @@ class PropertyGroup extends Base
     }
 
     /**
-     * @param boolean $comparable
+     * @param bool $comparable
+     *
      * @return PropertyGroup
      */
     public function setComparable($comparable)
     {
         $this->comparable = $comparable;
+
         return $this;
     }
 
@@ -120,11 +125,13 @@ class PropertyGroup extends Base
 
     /**
      * @param int $sortMode
+     *
      * @return PropertyGroup
      */
     public function setSortMode($sortMode)
     {
         $this->sortMode = $sortMode;
+
         return $this;
     }
 }

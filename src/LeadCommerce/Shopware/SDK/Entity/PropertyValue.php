@@ -7,13 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class PropertyValue
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class PropertyValue extends Base
 {
@@ -22,7 +19,7 @@ class PropertyValue extends Base
      */
     protected $id;
     /**
-     * @var double
+     * @var float
      */
     protected $valueNumeric;
     /**
@@ -48,11 +45,13 @@ class PropertyValue extends Base
 
     /**
      * @param int $id
+     *
      * @return PropertyValue
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +65,13 @@ class PropertyValue extends Base
 
     /**
      * @param float $valueNumeric
+     *
      * @return PropertyValue
      */
     public function setValueNumeric($valueNumeric)
     {
         $this->valueNumeric = $valueNumeric;
+
         return $this;
     }
 
@@ -84,11 +85,13 @@ class PropertyValue extends Base
 
     /**
      * @param int $position
+     *
      * @return PropertyValue
      */
     public function setPosition($position)
     {
         $this->position = $position;
+
         return $this;
     }
 
@@ -102,11 +105,13 @@ class PropertyValue extends Base
 
     /**
      * @param int $optionId
+     *
      * @return PropertyValue
      */
     public function setOptionId($optionId)
     {
         $this->optionId = $optionId;
+
         return $this;
     }
 
@@ -120,11 +125,13 @@ class PropertyValue extends Base
 
     /**
      * @param string $value
+     *
      * @return PropertyValue
      */
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 }
