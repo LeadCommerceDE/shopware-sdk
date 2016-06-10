@@ -117,7 +117,7 @@ class Article extends Base
      */
     protected $availableTo;
     /**
-     * @var Attribute
+     * @var ArticleAttribute
      */
     protected $attribute;
 
@@ -580,7 +580,7 @@ class Article extends Base
     }
 
     /**
-     * @param Attribute $attributes
+     * @param ArticleAttribute $attributes
      * @return Article
      */
     public function setAttributes($attributes)

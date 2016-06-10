@@ -90,7 +90,7 @@ class Billing extends Base
      */
     protected $birthday;
     /**
-     * @var Attribute[]
+     * @var BillingAttribute[]
      */
     protected $attribute;
 
@@ -419,7 +419,7 @@ class Billing extends Base
     }
 
     /**
-     * @return Attribute[]
+     * @return BillingAttribute[]
      */
     public function getAttributes()
     {
@@ -427,7 +427,7 @@ class Billing extends Base
     }
 
     /**
-     * @param Attribute[] $attribute
+     * @param BillingAttribute[] $attribute
      * @return Billing
      */
     public function setAttributes($attribute)
