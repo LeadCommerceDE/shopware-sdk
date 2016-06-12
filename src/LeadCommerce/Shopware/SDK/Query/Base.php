@@ -32,7 +32,6 @@ abstract class Base
     {
         $this->client = $client;
         $this->queryPath = $this->getQueryPath();
-        $this->singleQueryPath = $this->getQueryPath();
     }
 
     /**
@@ -142,7 +141,7 @@ abstract class Base
      */
     public function findOne($id)
     {
-        return $this->fetch($this->singleQueryPath . '/' . $id);
+        return $this->fetch($this->queryPath . '/' . $id);
     }
 
     /**
@@ -152,7 +151,7 @@ abstract class Base
      */
     public function save(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
-        $this->fetch($this->singleQueryPath, 'POST', $entity->getArrayCopy());
+        $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
 
         return $entity;
     }
