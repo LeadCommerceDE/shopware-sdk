@@ -101,7 +101,7 @@ abstract class Base
     /**
      * @param $content
      *
-     * @return mixed
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     protected function createEntity($content)
     {
@@ -154,5 +154,15 @@ abstract class Base
         $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
 
         return $entity;
+    }
+
+    /**
+     * @param array $attributes
+     * @return array|mixed
+     */
+    public function create(array $attributes)
+    {
+        $entity = $this->createEntity($attributes);
+        return $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
     }
 }
