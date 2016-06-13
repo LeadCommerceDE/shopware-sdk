@@ -50,11 +50,40 @@ abstract class Base
     }
 
     /**
+     * Gets the query path to look for entities.
+     * E.G: 'variants' or 'articles'
+     * @return string
+     */
+    abstract protected function getQueryPath();
+
+    /**
+     * Finds all entities.
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
+     */
+    public function findAll()
+    {
+        $this->validateMethodAllowed(Constants::METHOD_GET_BATCH);
+        return $this->fetch($this->queryPath);
+    }
+
+    /**
+     * Validates if the requested method is allowed.
+     * @param $method
+     * @throws MethodNotAllowedException
+     */
+    private function validateMethodAllowed($method)
+    {
+        if (!in_array($method, $this->methodsAllowed)) {
+            throw new MethodNotAllowedException('Method ' . $method . ' is not allowed for ' . get_class($this));
+        }
+    }
+
+    /**
      * Fetch and build entity.
      * @param $uri
      * @param string $method
-     * @param null   $body
-     * @param array  $headers
+     * @param null $body
+     * @param array $headers
      *
      * @return array|mixed
      */
@@ -63,36 +92,6 @@ abstract class Base
         $response = $this->client->request($uri, $method, $body, $headers);
 
         return $this->createEntityFromResponse($response);
-    }
-
-    /**
-     * @param $uri
-     * @param string $method
-     * @param null   $body
-     * @param array  $headers
-     *
-     * @return mixed|ResponseInterface
-     */
-    protected function fetchSimple($uri, $method = 'GET', $body = null, $headers = [])
-    {
-        return $this->client->request($uri, $method, $body, $headers);
-    }
-
-    /**
-     * Fetch as json object.
-     * @param $uri
-     * @param string $method
-     * @param null   $body
-     * @param array  $headers
-     *
-     * @return false|\stdClass
-     */
-    protected function fetchJson($uri, $method = 'GET', $body = null, $headers = [])
-    {
-        $response = $this->client->request($uri, $method, $body, $headers);
-        $response = json_decode($response->getBody()->getContents());
-
-        return $response ? $response : null;
     }
 
     /**
@@ -142,23 +141,6 @@ abstract class Base
     abstract protected function getClass();
 
     /**
-     * Gets the query path to look for entities.
-     * E.G: 'variants' or 'articles'
-     * @return string
-     */
-    abstract protected function getQueryPath();
-
-    /**
-     * Finds all entities.
-     * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
-     */
-    public function findAll()
-    {
-        $this->validateMethodAllowed(Constants::METHOD_GET_BATCH);
-        return $this->fetch($this->queryPath);
-    }
-
-    /**
      * Finds an entity by its id.
      * @param $id
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
@@ -171,13 +153,13 @@ abstract class Base
 
     /**
      * Creates an entity.
-     * @param array $attributes
+     * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
+     * @throws MethodNotAllowedException
      */
-    public function create(array $attributes)
+    public function create(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
         $this->validateMethodAllowed(Constants::METHOD_CREATE);
-        $entity = $this->createEntity($attributes);
         return $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
     }
 
@@ -233,14 +215,32 @@ abstract class Base
     }
 
     /**
-     * Validates if the requested method is allowed.
-     * @param $method
-     * @throws MethodNotAllowedException
+     * @param $uri
+     * @param string $method
+     * @param null $body
+     * @param array $headers
+     *
+     * @return mixed|ResponseInterface
      */
-    private function validateMethodAllowed($method)
+    protected function fetchSimple($uri, $method = 'GET', $body = null, $headers = [])
     {
-        if (!in_array($method, $this->methodsAllowed)) {
-            throw new MethodNotAllowedException('Method ' . $method . ' is not allowed for ' . get_class($this));
-        }
+        return $this->client->request($uri, $method, $body, $headers);
+    }
+
+    /**
+     * Fetch as json object.
+     * @param $uri
+     * @param string $method
+     * @param null $body
+     * @param array $headers
+     *
+     * @return false|\stdClass
+     */
+    protected function fetchJson($uri, $method = 'GET', $body = null, $headers = [])
+    {
+        $response = $this->client->request($uri, $method, $body, $headers);
+        $response = json_decode($response->getBody()->getContents());
+
+        return $response ? $response : null;
     }
 }

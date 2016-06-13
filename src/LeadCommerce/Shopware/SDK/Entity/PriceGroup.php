@@ -15,6 +15,15 @@ namespace LeadCommerce\Shopware\SDK\Entity;
 class PriceGroup extends Base
 {
     /**
+     * @var int
+     */
+    protected $id;
+    /**
+     * @var string
+     */
+    protected $description;
+
+    /**
      * @return int
      */
     public function getId()
@@ -53,13 +62,4 @@ class PriceGroup extends Base
 
         return $this;
     }
-
-    /**
-     * @var int
-     */
-    protected $id;
-    /**
-     * @var string
-     */
-    protected $description;
 }

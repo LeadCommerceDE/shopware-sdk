@@ -22,6 +22,14 @@ class VersionQuery extends Base
     ];
 
     /**
+     * @return false|\stdClass
+     */
+    public function getVersion()
+    {
+        return $this->fetchJson('/version');
+    }
+
+    /**
      * @return mixed
      */
     protected function getClass()
@@ -35,14 +43,6 @@ class VersionQuery extends Base
     protected function getQueryPath()
     {
         return 'version';
-    }
-
-    /**
-     * @return false|\stdClass
-     */
-    public function getVersion()
-    {
-        return $this->fetchJson('/version');
     }
 
 }
