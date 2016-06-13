@@ -9,12 +9,13 @@ namespace LeadCommerce\Shopware\SDK\Entity;
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-/**
- * Class Base
- * @package LeadCommerce\Shopware\SDK\Entity
- */
 class Base
 {
+    /**
+     * @var int
+     */
+    protected $id;
+
     /**
      * Sets the attributes of this entity.
      * @param array $attributes
@@ -39,4 +40,23 @@ class Base
     {
         return get_object_vars($this);
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     * @return Base
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
 }

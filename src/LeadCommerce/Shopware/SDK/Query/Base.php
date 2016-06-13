@@ -2,7 +2,9 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
+use LeadCommerce\Shopware\SDK\Exception\MethodNotAllowedException;
 use LeadCommerce\Shopware\SDK\ShopwareClient;
+use LeadCommerce\Shopware\SDK\Util\Constants;
 use Psr\Http\Message\ResponseInterface;
 
 /**
@@ -24,6 +26,19 @@ abstract class Base
     protected $queryPath;
 
     /**
+     * @var array
+     */
+    protected $methodsAllowed = [
+        Constants::METHOD_CREATE,
+        Constants::METHOD_GET,
+        Constants::METHOD_GET_BATCH,
+        Constants::METHOD_UPDATE,
+        Constants::METHOD_UPDATE_BATCH,
+        Constants::METHOD_DELETE,
+        Constants::METHOD_DELETE_BATCH,
+    ];
+
+    /**
      * Base constructor.
      *
      * @param $client
@@ -35,6 +50,7 @@ abstract class Base
     }
 
     /**
+     * Fetch and build entity.
      * @param $uri
      * @param string $method
      * @param null   $body
@@ -63,6 +79,7 @@ abstract class Base
     }
 
     /**
+     * Fetch as json object.
      * @param $uri
      * @param string $method
      * @param null   $body
@@ -79,6 +96,7 @@ abstract class Base
     }
 
     /**
+     * Creates an entity 
      * @param ResponseInterface $response
      *
      * @return array|mixed
@@ -99,6 +117,7 @@ abstract class Base
     }
 
     /**
+     * Creates an entity based on the getClass method.
      * @param $content
      *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
@@ -117,72 +136,111 @@ abstract class Base
     }
 
     /**
+     * Gets the class for the entities.
      * @return string
      */
     abstract protected function getClass();
 
     /**
+     * Gets the query path to look for entities.
+     * E.G: 'variants' or 'articles'
      * @return string
      */
     abstract protected function getQueryPath();
 
     /**
+     * Finds all entities.
      * @return array
      */
     public function findAll()
     {
+        $this->validateMethodAllowed(Constants::METHOD_GET_BATCH);
         return $this->fetch($this->queryPath);
     }
 
     /**
+     * Finds an entity by its id.
      * @param $id
-     *
      * @return array
      */
     public function findOne($id)
     {
+        $this->validateMethodAllowed(Constants::METHOD_GET);
         return $this->fetch($this->queryPath . '/' . $id);
     }
 
     /**
-     * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
-     *
-     * @return \LeadCommerce\Shopware\SDK\Entity\Base
-     */
-    public function save(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
-    {
-        $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
-
-        return $entity;
-    }
-
-    /**
+     * Creates an entity.
      * @param array $attributes
      * @return array|mixed
      */
     public function create(array $attributes)
     {
+        $this->validateMethodAllowed(Constants::METHOD_CREATE);
         $entity = $this->createEntity($attributes);
         return $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
     }
 
     /**
-     * @param int $id
-     * @param array $attributes
+     * Updates an entity.
+     * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
      * @return array|mixed
+     * @throws MethodNotAllowedException
      */
-    public function update($id, array $attributes)
+    public function update(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
-        $entity = $this->createEntity($attributes);
-        return $this->fetch($this->queryPath . '/' . $id, 'PUT', $entity->getArrayCopy());
+        $this->validateMethodAllowed(Constants::METHOD_UPDATE);
+        return $this->fetch($this->queryPath . '/' . $entity->getId(), 'PUT', $entity->getArrayCopy());
     }
 
     /**
+     * Updates a batch of this entity.
+     * @param \LeadCommerce\Shopware\SDK\Entity\Base[] $entities
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
+     */
+    public function updateBatch($entities)
+    {
+        $this->validateMethodAllowed(Constants::METHOD_UPDATE_BATCH);
+        $body = [];
+        foreach ($entities as $entity) {
+            $body[] = $entity->getArrayCopy();
+        }
+        return $this->fetch($this->queryPath . '/', 'PUT', $body);
+    }
+
+    /**
+     * Deletes an entity by its id..
      * @param $id
      * @return array|mixed
+     * @throws MethodNotAllowedException
      */
     public function delete($id)
     {
+        $this->validateMethodAllowed(Constants::METHOD_DELETE);
         return $this->fetch($this->queryPath . '/' . $id, 'DELETE');
+    }
+
+    /**
+     * Deletes a batch of this entity given by ids.
+     * @param array $ids
+     * @return array|mixed
+     * @throws MethodNotAllowedException
+     */
+    public function deleteBatch(array $ids)
+    {
+        $this->validateMethodAllowed(Constants::METHOD_DELETE_BATCH);
+        return $this->fetch($this->queryPath . '/', 'DELETE', $ids);
+    }
+
+    /**
+     * Validates if the requested method is allowed.
+     * @param $method
+     * @throws MethodNotAllowedException
+     */
+    private function validateMethodAllowed($method)
+    {
+        if (!in_array($method, $this->methodsAllowed)) {
+            throw new MethodNotAllowedException('Method ' . $method . ' is not allowed for ' . get_class($this));
+        }
     }
 }
