@@ -165,4 +165,24 @@ abstract class Base
         $entity = $this->createEntity($attributes);
         return $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
     }
+
+    /**
+     * @param int $id
+     * @param array $attributes
+     * @return array|mixed
+     */
+    public function update($id, array $attributes)
+    {
+        $entity = $this->createEntity($attributes);
+        return $this->fetch($this->queryPath . '/' . $id, 'PUT', $entity->getArrayCopy());
+    }
+
+    /**
+     * @param $id
+     * @return array|mixed
+     */
+    public function delete($id)
+    {
+        return $this->fetch($this->queryPath . '/' . $id, 'DELETE');
+    }
 }
