@@ -2,10 +2,9 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 /**
  * Class ArticleQuery
- * @package LeadCommerce\Shopware\SDK\Query
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */

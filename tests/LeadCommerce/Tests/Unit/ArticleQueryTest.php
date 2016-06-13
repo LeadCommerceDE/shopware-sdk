@@ -43,6 +43,7 @@ class ArticleQueryTest extends BaseTest
 
     /**
      * Gets the query to test.
+     *
      * @return \LeadCommerce\Shopware\SDK\Query\ArticleQuery
      */
     public function getQuery()
@@ -50,6 +51,7 @@ class ArticleQueryTest extends BaseTest
         if (!$this->query) {
             $this->query = new ArticleQuery($this->getMockClient());
         }
+
         return $this->query;
     }
 
@@ -58,7 +60,7 @@ class ArticleQueryTest extends BaseTest
         $this->mockHandler = new MockHandler([
             new Response(200, [], file_get_contents(__DIR__ . '/files/get_article.json')),
         ]);
-        
+
         /** @var Article $entity */
         $entity = $this->getQuery()->findOne(1);
         $this->assertInstanceOf(Article::class, $entity);
@@ -157,6 +159,4 @@ class ArticleQueryTest extends BaseTest
 
         $this->assertCount(0, $entities);
     }
-
-
 }
