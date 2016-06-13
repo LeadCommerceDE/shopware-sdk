@@ -1,29 +1,35 @@
 <?php
+/**
+ * LeadCommerce\Shopware\SDK\Query
+ *
+ * Copyright 2016 LeadCommerce
+ *
+ * @author Alexander Mahrt <amahrt@leadcommerce.de>
+ * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
+ */
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
 
 use LeadCommerce\Shopware\SDK\Util\Constants;
 
-class CountriesQuery extends Base
+class GenerateArticleImagesQuery extends Base
 {
+
     /**
      * @var array
      */
     protected $methodsAllowed = [
-        Constants::METHOD_CREATE,
-        Constants::METHOD_GET,
-        Constants::METHOD_GET_BATCH,
-        Constants::METHOD_UPDATE,
-        Constants::METHOD_DELETE,
+        Constants::METHOD_UPDATE
     ];
 
     /**
-     * @return mixed
+     * Gets the class for the entities.
+     * @return string
      */
     protected function getClass()
     {
-        return 'LeadCommerce\\Shopware\\SDK\\Entity\\Country';
+        return 'stdClass';
     }
 
     /**
@@ -33,6 +39,6 @@ class CountriesQuery extends Base
      */
     protected function getQueryPath()
     {
-        return 'countries';
+        return 'generateArticleImages';
     }
 }

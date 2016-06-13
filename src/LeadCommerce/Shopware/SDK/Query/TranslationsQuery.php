@@ -21,7 +21,9 @@ class TranslationsQuery extends Base
         Constants::METHOD_CREATE,
         Constants::METHOD_GET_BATCH,
         Constants::METHOD_UPDATE,
+        Constants::METHOD_UPDATE_BATCH,
         Constants::METHOD_DELETE,
+        Constants::METHOD_DELETE_BATCH,
     ];
 
     /**
