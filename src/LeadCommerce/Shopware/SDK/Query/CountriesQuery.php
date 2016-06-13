@@ -2,7 +2,6 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 use LeadCommerce\Shopware\SDK\Util\Constants;
 
 class CountriesQuery extends Base
@@ -29,6 +28,7 @@ class CountriesQuery extends Base
     /**
      * Gets the query path to look for entities.
      * E.G: 'variants' or 'articles'
+     *
      * @return string
      */
     protected function getQueryPath()
