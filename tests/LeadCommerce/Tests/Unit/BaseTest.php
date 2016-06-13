@@ -2,7 +2,11 @@
 
 namespace LeadCommerce\Tests\Unit;
 
-use PHPUnit_Framework_TestCase;
+use Guzzle\Tests\GuzzleTestCase;
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use LeadCommerce\Shopware\SDK\ShopwareClient;
 
 /**
  * Copyright 2016 LeadCommerce
@@ -10,28 +14,28 @@ use PHPUnit_Framework_TestCase;
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-abstract class BaseTest extends PHPUnit_Framework_TestCase
+abstract class BaseTest extends GuzzleTestCase
 {
     /**
-     * @var \LeadCommerce\Shopware\SDK\ShopwareClient
+     * @var ShopwareClient
      */
     protected $mockClient = null;
 
     /**
-     * @return \GuzzleHttp\Handler\MockHandler
+     * @var MockHandler
      */
-    protected abstract function getMockHandler();
+    protected $mockHandler;
 
     /**
-     * @return \LeadCommerce\Shopware\SDK\ShopwareClient
+     * @return ShopwareClient
      */
     public function getMockClient()
     {
         if (!$this->mockClient) {
-            $this->mockClient = new \LeadCommerce\Shopware\SDK\ShopwareClient('', 'test', 'test');
-            $mock = $this->getMockHandler();
-            $handler = \GuzzleHttp\HandlerStack::create($mock);
-            $client = new \GuzzleHttp\Client(['handler' => $handler, 'base_uri' => 'http://shopware-shop.dev/api/']);
+            $this->mockClient = new ShopwareClient('', 'test', 'test');
+            $mock = $this->mockHandler;
+            $handler = HandlerStack::create($mock);
+            $client = new Client(['handler' => $handler, 'base_uri' => 'http://shopware-shop.dev/api/']);
             $this->mockClient->setClient($client);
         }
 

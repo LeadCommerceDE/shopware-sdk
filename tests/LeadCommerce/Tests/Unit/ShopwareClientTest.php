@@ -2,6 +2,11 @@
 
 namespace LeadCommerce\Tests\Unit;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\Psr7\Response;
+use LeadCommerce\Shopware\SDK\Query\AddressQuery;
+
 /**
  * Copyright 2016 LeadCommerce
  *
@@ -13,6 +18,9 @@ class ShopwareClientTest extends BaseTest
 
     public function testRequest()
     {
+        $this->mockHandler = new MockHandler([
+            new Response(200)
+        ]);
         $response = $this->getMockClient()->request('/');
         $this->assertEquals(200, $response->getStatusCode());
     }
@@ -20,21 +28,11 @@ class ShopwareClientTest extends BaseTest
     public function testGetAddressQuery()
     {
         $query = $this->getMockClient()->getAddressQuery();
-        $this->assertInstanceOf(\LeadCommerce\Shopware\SDK\Query\AddressQuery::class, $query);
+        $this->assertInstanceOf(AddressQuery::class, $query);
     }
 
     public function testGetClient()
     {
-        $this->assertInstanceOf(\GuzzleHttp\Client::class, $this->getMockClient()->getClient());
-    }
-
-    /**
-     * @return \GuzzleHttp\Handler\MockHandler
-     */
-    protected function getMockHandler()
-    {
-        return new \GuzzleHttp\Handler\MockHandler([
-            new \GuzzleHttp\Psr7\Response(200)
-        ]);
+        $this->assertInstanceOf(Client::class, $this->getMockClient()->getClient());
     }
 }
