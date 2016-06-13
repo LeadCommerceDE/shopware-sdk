@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Entity;
 
-
 /**
  * Class Cache
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Cache extends Base
 {
@@ -48,11 +46,13 @@ class Cache extends Base
 
     /**
      * @param string $id
+     *
      * @return Cache
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -66,11 +66,13 @@ class Cache extends Base
 
     /**
      * @param string $dir
+     *
      * @return Cache
      */
     public function setDir($dir)
     {
         $this->dir = $dir;
+
         return $this;
     }
 
@@ -84,11 +86,13 @@ class Cache extends Base
 
     /**
      * @param string $size
+     *
      * @return Cache
      */
     public function setSize($size)
     {
         $this->size = $size;
+
         return $this;
     }
 
@@ -102,11 +106,13 @@ class Cache extends Base
 
     /**
      * @param int $files
+     *
      * @return Cache
      */
     public function setFiles($files)
     {
         $this->files = $files;
+
         return $this;
     }
 
@@ -120,11 +126,13 @@ class Cache extends Base
 
     /**
      * @param string $freeSpace
+     *
      * @return Cache
      */
     public function setFreeSpace($freeSpace)
     {
         $this->freeSpace = $freeSpace;
+
         return $this;
     }
 
@@ -138,11 +146,13 @@ class Cache extends Base
 
     /**
      * @param string $name
+     *
      * @return Cache
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -156,11 +166,13 @@ class Cache extends Base
 
     /**
      * @param string $backend
+     *
      * @return Cache
      */
     public function setBackend($backend)
     {
         $this->backend = $backend;
+
         return $this;
     }
 }

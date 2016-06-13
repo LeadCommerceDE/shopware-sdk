@@ -2,18 +2,16 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 use LeadCommerce\Shopware\SDK\Util\Constants;
 
 /**
  * Class VariantsQuery
- * @package LeadCommerce\Shopware\SDK\Query
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
 class VariantsQuery extends Base
 {
-
     /**
      * @var array
      */

@@ -2,18 +2,16 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 use LeadCommerce\Shopware\SDK\Util\Constants;
 
 /**
  * Class TranslationsQuery
- * @package LeadCommerce\Shopware\SDK\Query
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
 class TranslationsQuery extends Base
 {
-
     /**
      * @var array
      */

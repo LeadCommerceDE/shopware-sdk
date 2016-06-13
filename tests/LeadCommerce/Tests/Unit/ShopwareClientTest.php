@@ -15,11 +15,10 @@ use LeadCommerce\Shopware\SDK\Query\AddressQuery;
  */
 class ShopwareClientTest extends BaseTest
 {
-
     public function testRequest()
     {
         $this->mockHandler = new MockHandler([
-            new Response(200)
+            new Response(200),
         ]);
         $response = $this->getMockClient()->request('/');
         $this->assertEquals(200, $response->getStatusCode());

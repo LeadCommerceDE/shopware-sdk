@@ -2,10 +2,8 @@
 
 namespace LeadCommerce\Shopware\SDK\Entity;
 
-
 /**
  * Class Version
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Version extends Base
 {
@@ -28,11 +26,13 @@ class Version extends Base
 
     /**
      * @param string $version
+     *
      * @return Version
      */
     public function setVersion($version)
     {
         $this->version = $version;
+
         return $this;
     }
 
@@ -46,11 +46,13 @@ class Version extends Base
 
     /**
      * @param string $revision
+     *
      * @return Version
      */
     public function setRevision($revision)
     {
         $this->revision = $revision;
+
         return $this;
     }
 }

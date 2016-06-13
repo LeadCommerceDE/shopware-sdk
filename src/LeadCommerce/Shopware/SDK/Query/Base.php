@@ -52,23 +52,28 @@ abstract class Base
     /**
      * Gets the query path to look for entities.
      * E.G: 'variants' or 'articles'
+     *
      * @return string
      */
     abstract protected function getQueryPath();
 
     /**
      * Finds all entities.
+     *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
      */
     public function findAll()
     {
         $this->validateMethodAllowed(Constants::METHOD_GET_BATCH);
+
         return $this->fetch($this->queryPath);
     }
 
     /**
      * Validates if the requested method is allowed.
+     *
      * @param $method
+     *
      * @throws MethodNotAllowedException
      */
     private function validateMethodAllowed($method)
@@ -80,10 +85,11 @@ abstract class Base
 
     /**
      * Fetch and build entity.
+     *
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
      *
      * @return array|mixed
      */
@@ -96,6 +102,7 @@ abstract class Base
 
     /**
      * Creates an entity
+     *
      * @param ResponseInterface $response
      *
      * @return array|mixed
@@ -117,6 +124,7 @@ abstract class Base
 
     /**
      * Creates an entity based on the getClass method.
+     *
      * @param $content
      *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
@@ -136,48 +144,62 @@ abstract class Base
 
     /**
      * Gets the class for the entities.
+     *
      * @return string
      */
     abstract protected function getClass();
 
     /**
      * Finds an entity by its id.
+     *
      * @param $id
+     *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     public function findOne($id)
     {
         $this->validateMethodAllowed(Constants::METHOD_GET);
+
         return $this->fetch($this->queryPath . '/' . $id);
     }
 
     /**
      * Creates an entity.
+     *
      * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
-     * @return \LeadCommerce\Shopware\SDK\Entity\Base
+     *
      * @throws MethodNotAllowedException
+     *
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     public function create(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
         $this->validateMethodAllowed(Constants::METHOD_CREATE);
+
         return $this->fetch($this->queryPath, 'POST', $entity->getArrayCopy());
     }
 
     /**
      * Updates an entity.
+     *
      * @param \LeadCommerce\Shopware\SDK\Entity\Base $entity
-     * @return array|mixed
+     *
      * @throws MethodNotAllowedException
+     *
+     * @return array|mixed
      */
     public function update(\LeadCommerce\Shopware\SDK\Entity\Base $entity)
     {
         $this->validateMethodAllowed(Constants::METHOD_UPDATE);
+
         return $this->fetch($this->queryPath . '/' . $entity->getId(), 'PUT', $entity->getArrayCopy());
     }
 
     /**
      * Updates a batch of this entity.
+     *
      * @param \LeadCommerce\Shopware\SDK\Entity\Base[] $entities
+     *
      * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
      */
     public function updateBatch($entities)
@@ -187,38 +209,47 @@ abstract class Base
         foreach ($entities as $entity) {
             $body[] = $entity->getArrayCopy();
         }
+
         return $this->fetch($this->queryPath . '/', 'PUT', $body);
     }
 
     /**
      * Deletes an entity by its id..
+     *
      * @param $id
-     * @return array|mixed
+     *
      * @throws MethodNotAllowedException
+     *
+     * @return array|mixed
      */
     public function delete($id)
     {
         $this->validateMethodAllowed(Constants::METHOD_DELETE);
+
         return $this->fetch($this->queryPath . '/' . $id, 'DELETE');
     }
 
     /**
      * Deletes a batch of this entity given by ids.
+     *
      * @param array $ids
-     * @return array|mixed
+     *
      * @throws MethodNotAllowedException
+     *
+     * @return array|mixed
      */
     public function deleteBatch(array $ids)
     {
         $this->validateMethodAllowed(Constants::METHOD_DELETE_BATCH);
+
         return $this->fetch($this->queryPath . '/', 'DELETE', $ids);
     }
 
     /**
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
      *
      * @return mixed|ResponseInterface
      */
@@ -229,10 +260,11 @@ abstract class Base
 
     /**
      * Fetch as json object.
+     *
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
      *
      * @return false|\stdClass
      */

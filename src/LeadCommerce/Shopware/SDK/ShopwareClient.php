@@ -89,8 +89,8 @@ class ShopwareClient
      *
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
      *
      * @return mixed|\Psr\Http\Message\ResponseInterface
      */
@@ -106,8 +106,8 @@ class ShopwareClient
 
         return $this->client->request($method, $uri, [
             'form_params' => $body,
-            'headers' => $headers,
-            'auth' => [
+            'headers'     => $headers,
+            'auth'        => [
                 $this->username,
                 $this->apiKey,
                 'digest',
@@ -138,7 +138,6 @@ class ShopwareClient
         return new $className($this);
     }
 
-
     /**
      * @return Client
      */
@@ -149,11 +148,13 @@ class ShopwareClient
 
     /**
      * @param Client $client
+     *
      * @return ShopwareClient
      */
     public function setClient($client)
     {
         $this->client = $client;
+
         return $this;
     }
 }

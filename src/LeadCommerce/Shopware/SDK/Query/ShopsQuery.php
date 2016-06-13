@@ -2,12 +2,10 @@
 
 namespace LeadCommerce\Shopware\SDK\Query;
 
-
 use LeadCommerce\Shopware\SDK\Util\Constants;
 
 class ShopsQuery extends Base
 {
-
     /**
      * @var array
      */
