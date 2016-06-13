@@ -150,7 +150,7 @@ abstract class Base
 
     /**
      * Finds all entities.
-     * @return array
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base[]
      */
     public function findAll()
     {
@@ -161,18 +161,20 @@ abstract class Base
     /**
      * Finds an entity by its id.
      * @param $id
-     * @return array
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     public function findOne($id)
     {
         $this->validateMethodAllowed(Constants::METHOD_GET);
-        return $this->fetch($this->queryPath . '/' . $id);
+        $response = $this->fetch($this->queryPath . '/' . $id);
+        $entity = reset($response);
+        return $entity;
     }
 
     /**
      * Creates an entity.
      * @param array $attributes
-     * @return array|mixed
+     * @return \LeadCommerce\Shopware\SDK\Entity\Base
      */
     public function create(array $attributes)
     {

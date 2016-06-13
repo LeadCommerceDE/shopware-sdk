@@ -1,5 +1,7 @@
 <?php
 
+namespace LeadCommerce\Tests\Unit;
+
 /**
  * Copyright 2016 LeadCommerce
  *

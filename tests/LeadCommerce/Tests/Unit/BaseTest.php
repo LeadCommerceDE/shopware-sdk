@@ -1,5 +1,9 @@
 <?php
 
+namespace LeadCommerce\Tests\Unit;
+
+use PHPUnit_Framework_TestCase;
+
 /**
  * Copyright 2016 LeadCommerce
  *
