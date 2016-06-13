@@ -96,7 +96,7 @@ abstract class Base
     }
 
     /**
-     * Creates an entity 
+     * Creates an entity
      * @param ResponseInterface $response
      *
      * @return array|mixed
@@ -166,9 +166,7 @@ abstract class Base
     public function findOne($id)
     {
         $this->validateMethodAllowed(Constants::METHOD_GET);
-        $response = $this->fetch($this->queryPath . '/' . $id);
-        $entity = reset($response);
-        return $entity;
+        return $this->fetch($this->queryPath . '/' . $id);
     }
 
     /**
