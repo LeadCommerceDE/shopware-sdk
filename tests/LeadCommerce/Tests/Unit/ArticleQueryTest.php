@@ -68,4 +68,40 @@ class ArticleQueryTest extends BaseTest
         $this->assertEquals(1, $entity->getMainDetailId());
     }
 
+    public function testCreate()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . '/files/get_article.json')),
+        ]);
+
+        $attributes = json_decode(file_get_contents(__DIR__ . '/files/create_article.json'), true);
+
+        $entity = new Article();
+        $entity->setEntityAttributes($attributes['data']);
+
+        $response = $this->getQuery()->create($entity);
+
+        $entity->setId($response->getId());
+
+        $this->assertEquals($entity->getArrayCopy(), $response->getArrayCopy());
+    }
+
+    public function testUpdate()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . '/files/updated_article.json')),
+        ]);
+
+        $attributes = json_decode(file_get_contents(__DIR__ . '/files/update_article.json'), true);
+
+        $entity = new Article();
+        $entity->setEntityAttributes($attributes);
+        /** @var Article $updatedEntity */
+        $updatedEntity = $this->getQuery()->update($entity);
+        $this->assertInstanceOf(Article::class, $updatedEntity);
+        $this->assertEquals($entity->isActive(), $updatedEntity->isActive());
+        $this->assertEquals($entity->getName(), $updatedEntity->getName());
+    }
+
+
 }
