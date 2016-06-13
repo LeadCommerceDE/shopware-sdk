@@ -10,7 +10,7 @@ use LeadCommerce\Shopware\SDK\Query\CategoriesQuery;
 use LeadCommerce\Shopware\SDK\Query\CountriesQuery;
 use LeadCommerce\Shopware\SDK\Query\CustomerGroupsQuery;
 use LeadCommerce\Shopware\SDK\Query\CustomerQuery;
-use LeadCommerce\Shopware\SDK\Query\GenerateArticleImageQuery;
+use LeadCommerce\Shopware\SDK\Query\GenerateArticleImagesQuery;
 use LeadCommerce\Shopware\SDK\Query\ManufacturersQuery;
 use LeadCommerce\Shopware\SDK\Query\MediaQuery;
 use LeadCommerce\Shopware\SDK\Query\OrdersQuery;
@@ -33,7 +33,7 @@ use LeadCommerce\Shopware\SDK\Query\VersionQuery;
  * @method CountriesQuery getCountriesQuery()
  * @method CustomerGroupsQuery getCustomerGroupsQuery()
  * @method CustomerQuery getCustomerQuery()
- * @method GenerateArticleImageQuery getGenerateArticleImageQuery()
+ * @method GenerateArticleImagesQuery getGenerateArticleImageQuery()
  * @method MediaQuery getMediaQuery()
  * @method ManufacturersQuery getManufacturersQuery()
  * @method OrdersQuery getOrdersQuery()
@@ -136,5 +136,24 @@ class ShopwareClient
         }
 
         return new $className($this);
+    }
+
+
+    /**
+     * @return Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * @param Client $client
+     * @return ShopwareClient
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+        return $this;
     }
 }
