@@ -103,5 +103,60 @@ class ArticleQueryTest extends BaseTest
         $this->assertEquals($entity->getName(), $updatedEntity->getName());
     }
 
+    public function testUpdateBatch()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . '/files/updated_articles.json')),
+        ]);
+
+        $attributes = json_decode(file_get_contents(__DIR__ . '/files/update_articles.json'), true);
+
+        $entities = [];
+        foreach ($attributes as $attribute) {
+            $entity = new Article();
+            $entity->setEntityAttributes($attribute);
+            $entities[] = $entity;
+        }
+
+
+        /** @var Article $updatedEntities */
+        $updatedEntities = $this->getQuery()->updateBatch($entities);
+        $this->assertCount(2, $updatedEntities);
+
+        /** @var Article $updatedEntity */
+        $updatedEntity = $updatedEntities[0];
+        $this->assertInstanceOf(Article::class, $updatedEntity);
+        $this->assertEquals($entities[0]->isActive(), $updatedEntity->isActive());
+        $this->assertEquals($entities[0]->getName(), $updatedEntity->getName());
+
+        /** @var Article $updatedEntity */
+        $updatedEntity = $updatedEntities[1];
+        $this->assertInstanceOf(Article::class, $updatedEntity);
+        $this->assertEquals($entities[1]->isActive(), $updatedEntity->isActive());
+        $this->assertEquals($entities[1]->getName(), $updatedEntity->getName());
+    }
+
+    public function testDelete()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], '{"success":true,"data":[]}'),
+        ]);
+
+        $entities = $this->getQuery()->delete(1);
+
+        $this->assertCount(0, $entities);
+    }
+
+    public function testDeleteBatch()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], '{"success":true,"data":[]}'),
+        ]);
+
+        $entities = $this->getQuery()->deleteBatch([1, 2]);
+
+        $this->assertCount(0, $entities);
+    }
+
 
 }
