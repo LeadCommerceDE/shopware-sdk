@@ -7,12 +7,10 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
 
 /**
  * Class Article
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Article extends Base
 {
@@ -117,7 +115,7 @@ class Article extends Base
      */
     protected $availableTo;
     /**
-     * @var array
+     * @var ArticleAttribute
      */
     protected $attribute;
 
@@ -131,11 +129,13 @@ class Article extends Base
 
     /**
      * @param int $id
+     *
      * @return Article
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -149,11 +149,13 @@ class Article extends Base
 
     /**
      * @param int $mainDetailId
+     *
      * @return Article
      */
     public function setMainDetailId($mainDetailId)
     {
         $this->mainDetailId = $mainDetailId;
+
         return $this;
     }
 
@@ -167,11 +169,13 @@ class Article extends Base
 
     /**
      * @param int $supplierId
+     *
      * @return Article
      */
     public function setSupplierId($supplierId)
     {
         $this->supplierId = $supplierId;
+
         return $this;
     }
 
@@ -185,11 +189,13 @@ class Article extends Base
 
     /**
      * @param int $taxId
+     *
      * @return Article
      */
     public function setTaxId($taxId)
     {
         $this->taxId = $taxId;
+
         return $this;
     }
 
@@ -203,11 +209,13 @@ class Article extends Base
 
     /**
      * @param int $priceGroupId
+     *
      * @return Article
      */
     public function setPriceGroupId($priceGroupId)
     {
         $this->priceGroupId = $priceGroupId;
+
         return $this;
     }
 
@@ -221,11 +229,13 @@ class Article extends Base
 
     /**
      * @param int $filterGroupId
+     *
      * @return Article
      */
     public function setFilterGroupId($filterGroupId)
     {
         $this->filterGroupId = $filterGroupId;
+
         return $this;
     }
 
@@ -239,11 +249,13 @@ class Article extends Base
 
     /**
      * @param int $configuratorSetId
+     *
      * @return Article
      */
     public function setConfiguratorSetId($configuratorSetId)
     {
         $this->configuratorSetId = $configuratorSetId;
+
         return $this;
     }
 
@@ -257,11 +269,13 @@ class Article extends Base
 
     /**
      * @param string $name
+     *
      * @return Article
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -275,11 +289,13 @@ class Article extends Base
 
     /**
      * @param string $description
+     *
      * @return Article
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -293,11 +309,13 @@ class Article extends Base
 
     /**
      * @param string $descriptionLong
+     *
      * @return Article
      */
     public function setDescriptionLong($descriptionLong)
     {
         $this->descriptionLong = $descriptionLong;
+
         return $this;
     }
 
@@ -311,16 +329,18 @@ class Article extends Base
 
     /**
      * @param string $added
+     *
      * @return Article
      */
     public function setAdded($added)
     {
         $this->added = $added;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -328,12 +348,14 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return Article
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
@@ -347,16 +369,18 @@ class Article extends Base
 
     /**
      * @param int $pseudoSales
+     *
      * @return Article
      */
     public function setPseudoSales($pseudoSales)
     {
         $this->pseudoSales = $pseudoSales;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isHighlight()
     {
@@ -364,12 +388,14 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $highlight
+     * @param bool $highlight
+     *
      * @return Article
      */
     public function setHighlight($highlight)
     {
         $this->highlight = $highlight;
+
         return $this;
     }
 
@@ -383,11 +409,13 @@ class Article extends Base
 
     /**
      * @param string $keywords
+     *
      * @return Article
      */
     public function setKeywords($keywords)
     {
         $this->keywords = $keywords;
+
         return $this;
     }
 
@@ -401,11 +429,13 @@ class Article extends Base
 
     /**
      * @param string $metaTitle
+     *
      * @return Article
      */
     public function setMetaTitle($metaTitle)
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -419,16 +449,18 @@ class Article extends Base
 
     /**
      * @param string $changed
+     *
      * @return Article
      */
     public function setChanged($changed)
     {
         $this->changed = $changed;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isPriceGroupActive()
     {
@@ -436,17 +468,19 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $priceGroupActive
+     * @param bool $priceGroupActive
+     *
      * @return Article
      */
     public function setPriceGroupActive($priceGroupActive)
     {
         $this->priceGroupActive = $priceGroupActive;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isLastStock()
     {
@@ -454,17 +488,19 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $lastStock
+     * @param bool $lastStock
+     *
      * @return Article
      */
     public function setLastStock($lastStock)
     {
         $this->lastStock = $lastStock;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isCrossBundleLook()
     {
@@ -472,17 +508,19 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $crossBundleLook
+     * @param bool $crossBundleLook
+     *
      * @return Article
      */
     public function setCrossBundleLook($crossBundleLook)
     {
         $this->crossBundleLook = $crossBundleLook;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isNotification()
     {
@@ -490,12 +528,14 @@ class Article extends Base
     }
 
     /**
-     * @param boolean $notification
+     * @param bool $notification
+     *
      * @return Article
      */
     public function setNotification($notification)
     {
         $this->notification = $notification;
+
         return $this;
     }
 
@@ -509,11 +549,13 @@ class Article extends Base
 
     /**
      * @param string $template
+     *
      * @return Article
      */
     public function setTemplate($template)
     {
         $this->template = $template;
+
         return $this;
     }
 
@@ -527,11 +569,13 @@ class Article extends Base
 
     /**
      * @param int $mode
+     *
      * @return Article
      */
     public function setMode($mode)
     {
         $this->mode = $mode;
+
         return $this;
     }
 
@@ -545,11 +589,13 @@ class Article extends Base
 
     /**
      * @param string $availableFrom
+     *
      * @return Article
      */
     public function setAvailableFrom($availableFrom)
     {
         $this->availableFrom = $availableFrom;
+
         return $this;
     }
 
@@ -563,29 +609,33 @@ class Article extends Base
 
     /**
      * @param string $availableTo
+     *
      * @return Article
      */
     public function setAvailableTo($availableTo)
     {
         $this->availableTo = $availableTo;
+
         return $this;
     }
 
     /**
      * @return array
      */
-    public function getAttributeItems()
+    public function getAttributes()
     {
         return $this->attribute;
     }
 
     /**
-     * @param array $attributes
+     * @param ArticleAttribute $attributes
+     *
      * @return Article
      */
-    public function setAttributeItems($attributes)
+    public function setAttributes($attributes)
     {
         $this->attribute = $attributes;
+
         return $this;
     }
 }

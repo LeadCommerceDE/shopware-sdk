@@ -1,0 +1,37 @@
+# https://styleci.readme.io/docs/configuration
+
+preset: recommended
+
+risky: false
+
+linting: true
+
+enabled:
+  # - align_double_arrow
+  # - phpdoc_indent
+  # - strict # covered by risky: false
+  # - unalign_double_arrow
+
+disabled:
+  - concat_without_spaces
+  - phpdoc_summary
+
+finder:
+  # exclude:
+  #   - "tests"
+  name:
+    - "*.php"
+  # not-name:
+  #   - "*Stub.php"
+  # contains:
+  #   - "Foo"
+  # not-contains:
+  #   - "config"
+  # path:
+  #   - "foo/Stuff"
+  not-path:
+    - "vendor"
+  # depth:
+  #   - "< 3"
+  #
+

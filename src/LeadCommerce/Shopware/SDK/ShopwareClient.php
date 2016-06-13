@@ -2,7 +2,6 @@
 
 namespace LeadCommerce\Shopware\SDK;
 
-
 use GuzzleHttp\Client;
 use LeadCommerce\Shopware\SDK\Query\AddressQuery;
 use LeadCommerce\Shopware\SDK\Query\ArticleQuery;
@@ -23,9 +22,10 @@ use LeadCommerce\Shopware\SDK\Query\VersionQuery;
 
 /**
  * Class ShopwareClient
- * @package LeadCommerce\Shopware\SDK
+ *
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
+ *
  * @method AddressQuery getAddressQuery()
  * @method ArticleQuery getArticleQuery()
  * @method CacheQuery getCacheQuery()
@@ -69,6 +69,7 @@ class ShopwareClient
 
     /**
      * ShopwareClient constructor.
+     *
      * @param $baseUrl
      * @param null $username
      * @param null $apiKey
@@ -85,10 +86,12 @@ class ShopwareClient
 
     /**
      * Does a request.
+     *
      * @param $uri
      * @param string $method
-     * @param null $body
-     * @param array $headers
+     * @param null   $body
+     * @param array  $headers
+     *
      * @return mixed|\Psr\Http\Message\ResponseInterface
      */
     public function request($uri, $method = 'GET', $body = null, $headers = [])
@@ -103,20 +106,21 @@ class ShopwareClient
 
         return $this->client->request($method, $uri, [
             'form_params' => $body,
-            'headers' => $headers,
-            'auth' => [
+            'headers'     => $headers,
+            'auth'        => [
                 $this->username,
                 $this->apiKey,
-                'digest'
-            ]
+                'digest',
+            ],
         ]);
     }
 
-
     /**
      * Magically get the query classes.
+     *
      * @param $name
      * @param array $arguments
+     *
      * @return bool
      */
     public function __call($name, $arguments = [])
@@ -125,7 +129,7 @@ class ShopwareClient
             return false;
         }
 
-        $className = __NAMESPACE__ . "\\Query\\" . $matches[1];
+        $className = __NAMESPACE__ . '\\Query\\' . $matches[1];
 
         if (!class_exists($className)) {
             return false;

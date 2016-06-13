@@ -7,32 +7,29 @@
  * @author Alexander Mahrt <amahrt@leadcommerce.de>
  * @copyright 2016 LeadCommerce <amahrt@leadcommerce.de>
  */
-
 namespace LeadCommerce\Shopware\SDK\Entity;
-
 
 /**
  * Class Area
- * @package LeadCommerce\Shopware\SDK\Entity
  */
 class Area extends Base
 {
     /**
      * @var int
      */
-    protected  $id;
+    protected $id;
     /**
      * @var string
      */
-    protected  $name;
+    protected $name;
     /**
      * @var bool
      */
-    protected  $active;
+    protected $active;
     /**
      * @var Country[]
      */
-    protected  $countries;
+    protected $countries;
 
     /**
      * @return int
@@ -44,11 +41,13 @@ class Area extends Base
 
     /**
      * @param int $id
+     *
      * @return Area
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -62,16 +61,18 @@ class Area extends Base
 
     /**
      * @param string $name
+     *
      * @return Area
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isActive()
     {
@@ -79,12 +80,14 @@ class Area extends Base
     }
 
     /**
-     * @param boolean $active
+     * @param bool $active
+     *
      * @return Area
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
@@ -98,12 +101,13 @@ class Area extends Base
 
     /**
      * @param Country[] $countries
+     *
      * @return Area
      */
     public function setCountries($countries)
     {
         $this->countries = $countries;
+
         return $this;
     }
-
 }
