@@ -118,6 +118,10 @@ class Article extends Base
      * @var ArticleAttribute
      */
     protected $attribute;
+    /**
+     * @var Category[]
+     */
+    protected $categories;
 
     /**
      * @return int
@@ -638,4 +642,23 @@ class Article extends Base
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param Category[] $categories
+     * @return Article
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+        return $this;
+    }
+
 }
