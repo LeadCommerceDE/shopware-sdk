@@ -653,12 +653,13 @@ class Article extends Base
 
     /**
      * @param Category[] $categories
+     *
      * @return Article
      */
     public function setCategories($categories)
     {
         $this->categories = $categories;
+
         return $this;
     }
-
 }
