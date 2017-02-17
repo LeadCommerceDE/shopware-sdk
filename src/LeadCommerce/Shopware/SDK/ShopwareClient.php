@@ -86,7 +86,7 @@ class ShopwareClient
 
         $guzzleOptions = array_merge($guzzleOptions, [
             'base_uri' => $this->baseUrl,
-            'handler'  => $handlerStack
+            'handler'  => $handlerStack,
         ]);
         $this->client = new Client($guzzleOptions);
     }
