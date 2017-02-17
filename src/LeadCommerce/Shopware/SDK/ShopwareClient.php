@@ -76,17 +76,19 @@ class ShopwareClient
      * @param null $username
      * @param null $apiKey
      */
-    public function __construct($baseUrl, $username = null, $apiKey = null)
+    public function __construct($baseUrl, $username = null, $apiKey = null, array $guzzleOptions = [])
     {
         $this->baseUrl = $baseUrl;
         $this->username = $username;
         $this->apiKey = $apiKey;
         $curlHandler = new CurlHandler();
         $handlerStack = HandlerStack::create($curlHandler);
-        $this->client = new Client([
+
+        $guzzleOptions = array_merge($guzzleOptions, [
             'base_uri' => $this->baseUrl,
             'handler'  => $handlerStack
         ]);
+        $this->client = new Client($guzzleOptions);
     }
 
     /**
