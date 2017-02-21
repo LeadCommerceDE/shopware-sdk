@@ -36,6 +36,12 @@ See [API Docs](http://leadcommercede.github.io/shopware-sdk/)
     
     // Create a new client
     $client = new ShopwareClient('http://shopware.dev/api/', 'user', 'api_key');
+
+    /**
+     * set custom options for guzzle
+     * the official guzzle documentation contains a list of valid options (http://docs.guzzlephp.org/en/latest/request-options.html) 
+     */  
+    //$client = new ShopwareClient('http://shopware.dev/api/', 'user', 'api_key', ['cert' => ['/path/server.pem']]);
     
     // Fetch all articles
     $articles = $client->getArticleQuery()->findAll();
