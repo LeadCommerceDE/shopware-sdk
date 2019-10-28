@@ -3,6 +3,8 @@ LeadCommerce Shopware SDK
 
 A PHP SDK for the Shopware 5 REST API.
 
+STATUS: [Looking for a new maintainer!](https://github.com/LeadCommerceDE/shopware-sdk/issues/24)
+
 Code information:
 
 [![Build Status](https://travis-ci.org/LeadCommerceDE/shopware-sdk.png?branch=master)](https://travis-ci.org/LeadCommerceDE/shopware-sdk)
