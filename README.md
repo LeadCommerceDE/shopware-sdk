@@ -1,9 +1,9 @@
-LeadCommerce Shopware SDK 
+LeadCommerce Shopware SDK [OUTDATED / NO LONGER MAINTAINED]
 -----------------
 
 A PHP SDK for the Shopware 5 REST API.
 
-**!!!! This project is out of date and no longer beeing maintained. There are forks available; e.g.  [https://github.com/neta-io/shopware-sdk](neta-io/shopware-sdk) !!!!**
+**!!!! This project is out of date and no longer beeing maintained. There are forks available; e.g.  [neta-io/shopware-sdk](https://github.com/neta-io/shopware-sdk) !!!!**
 
 STATUS: [Looking for a new maintainer!](https://github.com/LeadCommerceDE/shopware-sdk/issues/24)
 
