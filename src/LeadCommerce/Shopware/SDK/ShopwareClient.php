@@ -21,6 +21,7 @@ use LeadCommerce\Shopware\SDK\Query\ShopsQuery;
 use LeadCommerce\Shopware\SDK\Query\TranslationsQuery;
 use LeadCommerce\Shopware\SDK\Query\VariantsQuery;
 use LeadCommerce\Shopware\SDK\Query\VersionQuery;
+use \JsonMapper;
 
 /**
  * Class ShopwareClient
@@ -70,6 +71,11 @@ class ShopwareClient
     protected $client;
 
     /**
+     * @var JsonMapper
+     */
+    protected $jsonMapper;
+
+    /**
      * ShopwareClient constructor.
      *
      * @param $baseUrl
@@ -89,6 +95,9 @@ class ShopwareClient
             'handler'  => $handlerStack,
         ]);
         $this->client = new Client($guzzleOptions);
+        $this->jsonMapper = new JsonMapper();
+        $this->jsonMapper->bEnforceMapType = false;
+        $this->jsonMapper->bStrictNullTypes = false;
     }
 
     /**
@@ -156,4 +165,21 @@ class ShopwareClient
 
         return $this;
     }
+
+    /**
+     * @return JsonMapper
+     */
+    public function getJsonMapper(): JsonMapper
+    {
+        return $this->jsonMapper;
+    }
+
+    /**
+     * @param JsonMapper $jsonMapper
+     */
+    public function setJsonMapper(JsonMapper $jsonMapper)
+    {
+        $this->jsonMapper = $jsonMapper;
+    }
+
 }

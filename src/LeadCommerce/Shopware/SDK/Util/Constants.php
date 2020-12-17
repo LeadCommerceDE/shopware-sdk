@@ -18,4 +18,7 @@ class Constants
     const METHOD_UPDATE_BATCH = 'UPDATE (BATCH)';
     const METHOD_DELETE = 'DELETE';
     const METHOD_DELETE_BATCH = 'DELETE (BATCH)';
+
+    const ORDER_ASC = 'ASC';
+    const ORDER_DESC = 'DESC';
 }

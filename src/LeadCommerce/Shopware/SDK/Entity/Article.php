@@ -27,9 +27,17 @@ class Article extends Base
      */
     protected $supplierId;
     /**
+     * @var Supplier
+     */
+    protected $supplier;
+    /**
      * @var int
      */
     protected $taxId;
+    /**
+     * @var Tax
+     */
+    protected $tax;
     /**
      * @var int
      */
@@ -188,6 +196,22 @@ class Article extends Base
     }
 
     /**
+     * @return Supplier
+     */
+    public function getSupplier()
+    {
+        return $this->supplier;
+    }
+
+    /**
+     * @param Supplier $supplier
+     */
+    public function setSupplier(Supplier $supplier)
+    {
+        $this->supplier = $supplier;
+    }
+
+    /**
      * @return int
      */
     public function getTaxId()
@@ -205,6 +229,22 @@ class Article extends Base
         $this->taxId = $taxId;
 
         return $this;
+    }
+
+    /**
+     * @return Tax
+     */
+    public function getTax()
+    {
+        return $this->tax;
+    }
+
+    /**
+     * @param Tax $tax
+     */
+    public function setTax($tax)
+    {
+        $this->tax = $tax;
     }
 
     /**
@@ -678,24 +718,8 @@ class Article extends Base
     /**
      * @param ArticleDetail $mainDetail
      */
-    public function setMainDetail(ArticleDetail $mainDetail)
+    public function setMainDetail($mainDetail)
     {
         $this->mainDetail = $mainDetail;
     }
-
-
-    /**
-     * @return array
-     */
-    public function getArrayCopy()
-    {
-        $arrayCopy = parent::getArrayCopy();
-        if (!empty($arrayCopy['taxId'])) {
-            $arrayCopy['tax'] = $arrayCopy['taxId'];
-            unset($arrayCopy['taxId']);
-        }
-        return $arrayCopy;
-    }
-
-
 }

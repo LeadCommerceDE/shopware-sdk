@@ -4,8 +4,11 @@ namespace LeadCommerce\Tests\Unit;
 
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
+use JsonMapper_Exception;
 use LeadCommerce\Shopware\SDK\Entity\Article;
+use LeadCommerce\Shopware\SDK\Exception\MethodNotAllowedException;
 use LeadCommerce\Shopware\SDK\Query\ArticleQuery;
+use LeadCommerce\Shopware\SDK\Util\Constants;
 
 /**
  * Copyright 2016 LeadCommerce
@@ -41,6 +44,70 @@ class ArticleQueryTest extends BaseTest
         $this->assertEquals(2, $article->getMainDetailId());
     }
 
+    public function testFindByParams()
+    {
+        $this->mockHandler = new MockHandler([
+            new Response(200, [], file_get_contents(__DIR__ . '/files/get_articles.json')),
+        ]);
+
+        $term = 'foo';
+
+        $entities = $this->getQuery()->findByParams(
+            [
+                'limit' => 10,
+                'start' => 20,
+                'sort' => [
+                    [
+                        'property' => 'name',
+                        'direction' => Constants::ORDER_ASC
+                    ]
+                ],
+                'filter' => [
+                    [
+                        'property' => 'name',
+                        'expression' => 'LIKE',
+                        'value' => '%' . $term . '%'
+                    ],
+                    [
+                        'operator' => 'AND',
+                        'property' => 'number',
+                        'expression' => '>',
+                        'value' => '500'
+                    ]
+                ]
+            ]);
+
+        $this->assertCount(2, $entities);
+
+        foreach ($entities as $entity) {
+            $this->assertInstanceOf(Article::class, $entity);
+        }
+
+        /** @var \LeadCommerce\Shopware\SDK\Entity\Article $article */
+        $article = $entities[1];
+
+        $this->assertEquals(2, $article->getId());
+        $this->assertEquals('Glastisch rund', $article->getName());
+        $this->assertEquals(2, $article->getMainDetailId());
+
+        $lastRequest = $this->mockHandler->getLastRequest();
+
+        $query = urldecode($lastRequest->getUri()->getQuery());
+
+        $this->assertContains('limit=10', $query);
+        $this->assertContains('start=20', $query);
+        $this->assertContains('sort[0][property]=name', $query);
+        $this->assertContains('sort[0][direction]=' . Constants::ORDER_ASC, $query);
+        $this->assertContains('filter[0][property]=name', $query);
+        $this->assertContains('filter[0][expression]=LIKE', $query);
+        $this->assertContains('filter[0][value]=%foo%', $query);
+        $this->assertContains('filter[1][operator]=AND', $query);
+        $this->assertContains('filter[1][property]=number', $query);
+        $this->assertContains('filter[1][expression]=>', $query);
+        $this->assertContains('filter[1][value]=500', $query);
+
+    }
+
     /**
      * Gets the query to test.
      *
@@ -70,6 +137,10 @@ class ArticleQueryTest extends BaseTest
         $this->assertEquals(1, $entity->getMainDetailId());
     }
 
+    /**
+     * @throws JsonMapper_Exception
+     * @throws MethodNotAllowedException
+     */
     public function testCreate()
     {
         $this->mockHandler = new MockHandler([
@@ -79,7 +150,7 @@ class ArticleQueryTest extends BaseTest
         $attributes = json_decode(file_get_contents(__DIR__ . '/files/create_article.json'), true);
 
         $entity = new Article();
-        $entity->setEntityAttributes($attributes['data']);
+        $entity = $this->getMockClient()->getJsonMapper()->map($attributes['data'], $entity);
 
         $response = $this->getQuery()->create($entity);
 
@@ -88,6 +159,10 @@ class ArticleQueryTest extends BaseTest
         $this->assertEquals($entity->getArrayCopy(), $response->getArrayCopy());
     }
 
+    /**
+     * @throws JsonMapper_Exception
+     * @throws MethodNotAllowedException
+     */
     public function testUpdate()
     {
         $this->mockHandler = new MockHandler([
@@ -97,7 +172,9 @@ class ArticleQueryTest extends BaseTest
         $attributes = json_decode(file_get_contents(__DIR__ . '/files/update_article.json'), true);
 
         $entity = new Article();
-        $entity->setEntityAttributes($attributes);
+        /** @var Article $entity */
+        $entity = $this->getMockClient()->getJsonMapper()->map($attributes, $entity);
+
         /** @var Article $updatedEntity */
         $updatedEntity = $this->getQuery()->update($entity);
         $this->assertInstanceOf(Article::class, $updatedEntity);
@@ -116,7 +193,8 @@ class ArticleQueryTest extends BaseTest
         $entities = [];
         foreach ($attributes as $attribute) {
             $entity = new Article();
-            $entity->setEntityAttributes($attribute);
+            /** @var Article $entity */
+            $entity = $this->getMockClient()->getJsonMapper()->map($attribute, $entity);
             $entities[] = $entity;
         }
 
@@ -141,7 +219,7 @@ class ArticleQueryTest extends BaseTest
     public function testDelete()
     {
         $this->mockHandler = new MockHandler([
-            new Response(200, [], '{"success":true,"data":[]}'),
+            new Response(200, [], '{"success":true}'),
         ]);
 
         $entities = $this->getQuery()->delete(1);
@@ -151,12 +229,36 @@ class ArticleQueryTest extends BaseTest
 
     public function testDeleteBatch()
     {
+        $jsonResponse = [
+            'success' => true,
+            'data' => [
+                [
+                    'success' => true,
+                    'operation' => 'delete',
+                    'data' => [
+                        'id' => 1,
+                        'mainDetailId' => 1,
+                        'taxId' => 1
+                    ]
+                ],
+                [
+                    'success' => true,
+                    'operation' => 'delete',
+                    'data' => [
+                        'id' => 2,
+                        'mainDetailId' => 2,
+                        'taxId' => 1
+                    ]
+                ]
+            ]
+        ];
+
         $this->mockHandler = new MockHandler([
-            new Response(200, [], '{"success":true,"data":[]}'),
+            new Response(200, [], json_encode($jsonResponse)),
         ]);
 
         $entities = $this->getQuery()->deleteBatch([1, 2]);
 
-        $this->assertCount(0, $entities);
+        $this->assertCount(2, $entities);
     }
 }

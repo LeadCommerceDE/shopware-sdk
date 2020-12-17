@@ -19,7 +19,7 @@ class OrderDetail extends Base
      */
     protected $id;
     /**
-     * @var string
+     * @var int
      */
     protected $orderId;
     /**
@@ -120,7 +120,7 @@ class OrderDetail extends Base
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getOrderId()
     {
@@ -128,7 +128,7 @@ class OrderDetail extends Base
     }
 
     /**
-     * @param string $orderId
+     * @param int $orderId
      *
      * @return OrderDetail
      */

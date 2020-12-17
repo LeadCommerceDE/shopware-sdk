@@ -6,6 +6,7 @@ use Guzzle\Tests\GuzzleTestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
+use JsonMapper;
 use LeadCommerce\Shopware\SDK\ShopwareClient;
 
 /**
@@ -37,6 +38,10 @@ abstract class BaseTest extends GuzzleTestCase
             $handler = HandlerStack::create($mock);
             $client = new Client(['handler' => $handler, 'base_uri' => 'http://shopware-shop.dev/api/']);
             $this->mockClient->setClient($client);
+            $jsonMapper = new JsonMapper();
+            $jsonMapper->bEnforceMapType = false;
+            $jsonMapper->bStrictNullTypes = false;
+            $this->mockClient->setJsonMapper($jsonMapper);
         }
 
         return $this->mockClient;

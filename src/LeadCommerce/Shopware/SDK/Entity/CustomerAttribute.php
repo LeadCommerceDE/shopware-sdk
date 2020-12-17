@@ -22,6 +22,10 @@ class CustomerAttribute extends Base
      * @var int
      */
     protected $customerId;
+    /**
+     * @var string
+     */
+    protected $stripeCustomerId;
 
     /**
      * @return int
@@ -59,6 +63,26 @@ class CustomerAttribute extends Base
     public function setCustomerId($customerId)
     {
         $this->customerId = $customerId;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStripeCustomerId()
+    {
+        return $this->stripeCustomerId;
+    }
+
+    /**
+     * @param int $stripeCustomerId
+     *
+     * @return CustomerAttribute
+     */
+    public function setStripeCustomerId($stripeCustomerId)
+    {
+        $this->stripeCustomerId = $stripeCustomerId;
 
         return $this;
     }

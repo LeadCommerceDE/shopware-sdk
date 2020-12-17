@@ -79,6 +79,31 @@ See [API Docs](http://leadcommercede.github.io/shopware-sdk/)
     
     // Delete multiple articles at once
     $client->getArticleQuery()->deleteBatch([1, 2, 3]);
+    
+    // Find article by parameters
+    $client->getArticleQuery()->findByParams([
+        'limit' => 10,
+        'start' => 20,
+        'sort' => [
+            [
+                'property' => 'name',
+                'direction' => \LeadCommerce\Shopware\SDK\Util\Constants::ORDER_ASC
+            ]
+        ],
+        'filter' => [
+            [
+                'property' => 'name',
+                'expression' => 'LIKE',
+                'value' => '%' . $term . '%'
+            ],
+            [
+                'operator' => 'AND',
+                'property' => 'number',
+                'expression' => '>',
+                'value' => '500'
+            ]
+        ]
+    ]);
 ?>
 ```
 

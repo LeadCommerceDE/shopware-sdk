@@ -55,7 +55,7 @@ class Address extends Base
      */
     protected $phone;
     /**
-     * @var int
+     * @var string
      */
     protected $vatId;
     /**
@@ -67,7 +67,7 @@ class Address extends Base
      */
     protected $additionalAddressLine2;
     /**
-     * @var int
+     * @var Country
      */
     protected $country;
     /**
@@ -78,6 +78,11 @@ class Address extends Base
      * @var array
      */
     protected $attribute;
+
+    /**
+     * @var Customer
+     */
+    protected $customer;
 
     /**
      * @return int
@@ -280,7 +285,7 @@ class Address extends Base
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getVatId()
     {
@@ -288,7 +293,7 @@ class Address extends Base
     }
 
     /**
-     * @param int $vatId
+     * @param string $vatId
      *
      * @return Address
      */
@@ -340,7 +345,7 @@ class Address extends Base
     }
 
     /**
-     * @return int
+     * @return Country
      */
     public function getCountry()
     {
@@ -348,7 +353,7 @@ class Address extends Base
     }
 
     /**
-     * @param int $country
+     * @param Country $country
      *
      * @return Address
      */
@@ -397,5 +402,21 @@ class Address extends Base
         $this->attribute = $attribute;
 
         return $this;
+    }
+
+    /**
+     * @return Customer
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    /**
+     * @param Customer $customer
+     */
+    public function setCustomer($customer)
+    {
+        $this->customer = $customer;
     }
 }

@@ -16,25 +16,6 @@ class Base
     protected $id;
 
     /**
-     * Sets the attributes of this entity.
-     *
-     * @param array $attributes
-     *
-     * @return $this
-     */
-    public function setEntityAttributes(array $attributes)
-    {
-        foreach ($attributes as $attribute => $value) {
-            $setter = 'set' . ucfirst($attribute);
-            if (method_exists($this, $setter)) {
-                $this->$setter($value);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
      * Gets the attributes of this entity.
      *
      * @return array
@@ -54,6 +35,11 @@ class Base
                 }
             }
         }
+
+        $array = array_filter($array, function ($value) {
+            return $value !== null;
+        });
+
         return $array;
     }
 

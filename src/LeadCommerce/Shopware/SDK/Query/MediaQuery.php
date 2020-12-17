@@ -19,6 +19,7 @@ class MediaQuery extends Base
         Constants::METHOD_CREATE,
         Constants::METHOD_GET,
         Constants::METHOD_GET_BATCH,
+        Constants::METHOD_UPDATE,
         Constants::METHOD_DELETE,
     ];
 
